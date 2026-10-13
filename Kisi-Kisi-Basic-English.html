@@ -1,0 +1,921 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+/* Tombol download PDF di pojok kanan atas */
+.pdf-download {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.pdf-download:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+.pdf-download:active { transform: translateY(0); }
+@media (max-width: 480px) {
+  .pdf-download {
+    top: 10px;
+    right: 10px;
+    padding: 8px 11px;
+    font-size: 0.82rem;
+  }
+  .wrap { padding-top: 68px; }
+}
+
+</style></head><body>
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<title>Kisi-Kisi Basic English</title>
+<style>
+:root {
+  --bg: #f7f6f2;
+  --surface: #ffffff;
+  --fg: #1d1f24;
+  --muted: #5d6270;
+  --line: #e2e0d8;
+  --accent: #1f6f5c;
+  --accent-soft: #dcefe9;
+  --warm: #9a4a24;
+  --warm-soft: #f8e6dc;
+  --tip: #1f4f8a;
+  --tip-soft: #e1ecf8;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15171b;
+    --surface: #1e2127;
+    --fg: #ecebe6;
+    --muted: #a3a8b4;
+    --line: #2f333c;
+    --accent: #6fd0b5;
+    --accent-soft: #223a33;
+    --warm: #f0a07a;
+    --warm-soft: #3a2a22;
+    --tip: #9cc4f0;
+    --tip-soft: #1f2c3d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15171b;
+  --surface: #1e2127;
+  --fg: #ecebe6;
+  --muted: #a3a8b4;
+  --line: #2f333c;
+  --accent: #6fd0b5;
+  --accent-soft: #223a33;
+  --warm: #f0a07a;
+  --warm-soft: #3a2a22;
+  --tip: #9cc4f0;
+  --tip-soft: #1f2c3d;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+}
+.wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding-inline: 16px;
+  padding-block: 24px 56px;
+}
+h1 { font-size: 1.8rem; line-height: 1.2; margin: 0 0 10px; text-wrap: balance; }
+h2 { font-size: 1.35rem; margin: 0 0 4px; text-wrap: balance; }
+h3 { font-size: 1rem; margin: 22px 0 8px; color: var(--accent); }
+p { margin: 0 0 12px; }
+.lead { color: var(--muted); margin-bottom: 18px; }
+
+nav.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 28px;
+}
+nav.chips a {
+  color: var(--accent);
+  background: var(--accent-soft);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 28px;
+  scroll-margin-top: 16px;
+}
+.acara-no {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--warm);
+  background: var(--warm-soft);
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+.sub { color: var(--muted); margin-bottom: 14px; }
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 580px) {
+  .grid2 { grid-template-columns: 1fr 1fr; }
+}
+.block { min-width: 0; }
+
+ul, ol { margin: 0; padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  display: block;
+  overflow-x: auto;
+}
+th, td {
+  text-align: left;
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+th { color: var(--muted); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.04em; }
+
+.pattern {
+  background: var(--accent-soft);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin: 10px 0;
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 0.9rem;
+  overflow-x: auto;
+}
+.warn, .tip {
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin: 14px 0;
+}
+.warn { background: var(--warm-soft); }
+.warn strong { color: var(--warm); }
+.tip { background: var(--tip-soft); }
+.tip strong { color: var(--tip); }
+.example {
+  border-left: 3px solid var(--accent);
+  padding: 4px 0 4px 12px;
+  margin: 10px 0;
+}
+.example em { color: var(--muted); font-style: normal; }
+
+/* ---- Latihan pilihan ganda ---- */
+.quiz {
+  margin-top: 22px;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+.quiz-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.score { font-weight: 600; color: var(--accent); margin: 0; }
+.reset {
+  font: inherit;
+  font-size: 0.88rem;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 0;
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+.qitem {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+.qtext { font-weight: 600; margin-bottom: 10px; }
+.opts { display: grid; gap: 8px; }
+.opt {
+  font: inherit;
+  text-align: left;
+  color: var(--fg);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 12px;
+  cursor: pointer;
+  line-height: 1.5;
+}
+.opt:hover:not(:disabled) { border-color: var(--accent); }
+.opt:disabled { cursor: default; }
+.opt.right { border-color: var(--accent); background: var(--accent-soft); }
+.opt.wrong { border-color: var(--warm); background: var(--warm-soft); }
+.fb {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--surface);
+  border: 1px dashed var(--line);
+  font-size: 0.95rem;
+}
+.fb.ok strong { color: var(--accent); }
+.fb.no strong { color: var(--warm); }
+.fb p { margin: 4px 0; }
+
+details {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-top: 14px;
+}
+details summary { cursor: pointer; font-weight: 600; color: var(--accent); }
+details[open] summary { margin-bottom: 10px; }
+
+footer {
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+  margin-top: 8px;
+}
+</style>
+</head>
+<body>
+<a class="pdf-download" href="Kisi-Kisi-Basic-English.pdf" download="Kisi-Kisi-Basic-English.pdf" aria-label="Download versi PDF">
+  <span aria-hidden="true">↓</span> Download PDF
+</a>
+
+<main class="wrap">
+
+<h1>Kisi-Kisi Basic English</h1>
+<p class="lead">Panduan ini merangkum Acara 1 sampai 6 dengan bahasa sederhana. Setiap acara berisi penjelasan materi, contoh dengan arti, kesalahan yang sering terjadi, dan <strong>latihan pilihan ganda</strong>. Setiap jawaban langsung diberi penjelasan, baik untuk jawaban yang benar maupun yang salah.</p>
+
+<nav class="chips" aria-label="Daftar acara">
+  <a href="#acara1">Acara 1</a>
+  <a href="#acara2">Acara 2</a>
+  <a href="#acara3">Acara 3</a>
+  <a href="#acara4">Acara 4</a>
+  <a href="#acara5">Acara 5</a>
+  <a href="#acara6">Acara 6</a>
+</nav>
+
+<!-- ============ ACARA 1 ============ -->
+<section class="card" id="acara1">
+  <span class="acara-no">ACARA 1</span>
+  <h2>Introducing and Exchanging Personal Information</h2>
+  <p class="sub">Cara memperkenalkan diri dan bertanya tentang orang lain.</p>
+
+  <h3>1. Salam (Greetings)</h3>
+  <ul>
+    <li><strong>Good morning</strong> = selamat pagi</li>
+    <li><strong>Good afternoon</strong> = selamat siang / sore</li>
+    <li><strong>Good evening</strong> = selamat malam</li>
+    <li><strong>Hi / Hello</strong> = halo (lebih santai)</li>
+  </ul>
+  <div class="example">
+    How are you? <em>(apa kabar?)</em><br>
+    I'm fine, thank you. <em>(saya baik, terima kasih.)</em><br>
+    Nice to meet you. <em>(senang bertemu denganmu.)</em>
+  </div>
+
+  <h3>2. Gelar (Titles)</h3>
+  <p>Gelar dipakai di depan <strong>nama keluarga</strong>, bukan nama depan.</p>
+  <table>
+    <tr><th>Gelar</th><th>Dipakai untuk</th></tr>
+    <tr><td>Mr.</td><td>pria</td></tr>
+    <tr><td>Mrs.</td><td>wanita yang sudah menikah</td></tr>
+    <tr><td>Miss</td><td>wanita yang belum menikah</td></tr>
+    <tr><td>Ms.</td><td>wanita (menikah atau belum), paling aman dipakai</td></tr>
+  </table>
+  <div class="example">Suzy Grant &rarr; <strong>Ms. Grant</strong> (benar), bukan <em>Ms. Suzy</em>.</div>
+
+  <h3>3. Memperkenalkan diri dan orang lain</h3>
+  <ul>
+    <li>Diri sendiri: <em>Hello, my name is Rafi. I'm a student.</em></li>
+    <li>Orang lain: <em>Juliette, this is Marc.</em></li>
+    <li>Lebih formal: <em>I'd like you to meet my classmate, Sara.</em></li>
+  </ul>
+
+  <h3>4. Menanyakan informasi pribadi</h3>
+  <table>
+    <tr><th>Kata tanya</th><th>Untuk menanyakan</th><th>Contoh</th></tr>
+    <tr><td>Who</td><td>orang</td><td>Who's Ms. Nieto? &rarr; She's my teacher.</td></tr>
+    <tr><td>What</td><td>benda / pekerjaan / nama</td><td>What's your occupation? &rarr; I'm an engineer.</td></tr>
+    <tr><td>Where</td><td>tempat / asal</td><td>Where's she from? &rarr; She's from Seoul, Korea.</td></tr>
+    <tr><td>How old</td><td>umur</td><td>How old is your brother? &rarr; He's twenty-six.</td></tr>
+  </table>
+
+  <h3>5. Kata ganti dan kepemilikan</h3>
+  <table>
+    <tr><th>Subjek</th><th>Objek</th><th>Possessive adjective</th><th>Possessive pronoun</th></tr>
+    <tr><td>I</td><td>me</td><td>my</td><td>mine</td></tr>
+    <tr><td>you</td><td>you</td><td>your</td><td>yours</td></tr>
+    <tr><td>he</td><td>him</td><td>his</td><td>his</td></tr>
+    <tr><td>she</td><td>her</td><td>her</td><td>hers</td></tr>
+    <tr><td>it</td><td>it</td><td>its</td><td>its</td></tr>
+    <tr><td>we</td><td>us</td><td>our</td><td>ours</td></tr>
+    <tr><td>they</td><td>them</td><td>their</td><td>theirs</td></tr>
+  </table>
+  <p><strong>Cara membaca tabel:</strong> <em>possessive adjective</em> selalu diikuti kata benda (<em>my book</em>). <em>Possessive pronoun</em> berdiri sendiri (<em>This book is mine.</em>).</p>
+
+  <h3>6. Kata sambung dan "to be"</h3>
+  <div class="pattern">
+    I am &rarr; I'm &nbsp;|&nbsp; He is &rarr; He's &nbsp;|&nbsp; We are &rarr; We're<br>
+    She is &rarr; She's &nbsp;|&nbsp; You are &rarr; You're &nbsp;|&nbsp; They are &rarr; They're
+  </div>
+
+  <h3>7. Kepemilikan dengan 's</h3>
+  <ul>
+    <li>Nama tunggal: <em>Peter's father</em> (ayah Peter).</li>
+    <li>Jamak berakhiran -s hanya diberi <strong>'</strong>: <em>the students' names</em>.</li>
+    <li>Dua nama digabung: <em>Sally and Hannah's class</em>.</li>
+  </ul>
+
+  <div class="warn"><strong>Hati-hati:</strong> <em>Who</em> untuk orang, <em>What</em> untuk benda. Pastikan jawaban sesuai dengan kata tanyanya.</div>
+
+  <div class="quiz" id="quiz1"></div>
+</section>
+
+<!-- ============ ACARA 2 ============ -->
+<section class="card" id="acara2">
+  <span class="acara-no">ACARA 2</span>
+  <h2>Asking for and Giving Assistance</h2>
+  <p class="sub">Cara meminta, menawarkan, dan menolak bantuan dengan sopan.</p>
+
+  <h3>1. Agar orang mau membantu</h3>
+  <ol>
+    <li><strong>Tunjukkan bahwa kamu sudah mencoba sendiri.</strong> Contoh: <em>I tried restarting my laptop.</em></li>
+    <li><strong>Tunjukkan bahwa saran orang sebelumnya sudah kamu jalankan.</strong> Contoh: <em>I followed your advice. Thank you.</em></li>
+    <li><strong>Tanyakan waktu yang pas.</strong> Contoh: <em>When would be the best time to talk?</em></li>
+    <li><strong>Jelaskan dengan jelas apa yang kamu mau.</strong></li>
+  </ol>
+
+  <h3>2. Pola meminta bantuan</h3>
+  <div class="pattern">
+    Can you help me? &nbsp;(bisakah kamu membantuku?)<br>
+    Could you help me, please? &nbsp;(lebih sopan)<br>
+    Could you + kata kerja dasar, please? &nbsp;(Could you open the door, please?)
+  </div>
+  <p>Setelah <em>can</em> atau <em>could</em>, kata kerjanya selalu bentuk dasar: <em>Could you help me?</em>, bukan <em>Could you helping me?</em>.</p>
+
+  <h3>3. Menawarkan dan menjawab bantuan</h3>
+  <table>
+    <tr><th>Fungsi</th><th>Ungkapan</th><th>Arti</th></tr>
+    <tr><td>Menawarkan</td><td>Can I help you?</td><td>bisakah saya membantu Anda?</td></tr>
+    <tr><td>Menawarkan</td><td>What can I do for you?</td><td>apa yang bisa saya bantu?</td></tr>
+    <tr><td>Setuju</td><td>Sure. / Of course.</td><td>tentu.</td></tr>
+    <tr><td>Menolak</td><td>Sorry, I can't.</td><td>maaf, saya tidak bisa.</td></tr>
+    <tr><td>Terima kasih</td><td>Thank you for your help.</td><td>terima kasih atas bantuanmu.</td></tr>
+    <tr><td>Membalas</td><td>You're welcome. / No problem.</td><td>sama-sama.</td></tr>
+  </table>
+
+  <h3>4. Too + kata sifat</h3>
+  <p><em>Too</em> artinya "terlalu" dan biasanya bermakna <strong>negatif</strong>.</p>
+  <div class="example">
+    This bag is too heavy. <em>(tas ini terlalu berat.)</em><br>
+    I'm too tired. Let's not go out. <em>(saya terlalu lelah.)</em>
+  </div>
+  <div class="warn"><strong>Hati-hati:</strong> untuk memuji, pakai <em>so</em>, bukan <em>too</em>.<br>
+  Benar: <em>She is so pretty!</em> &nbsp;|&nbsp; Salah: <em>She's too pretty.</em></div>
+
+  <h3>5. Kalimat untuk izin dan permintaan</h3>
+  <ul>
+    <li><em>Do you mind if I open the window?</em> &nbsp;(apakah kamu keberatan jika saya membuka jendela?)</li>
+    <li><em>Is it OK if I leave early today?</em> &nbsp;(boleh tidak saya pulang lebih awal?)</li>
+    <li><em>Could you turn the music down, please?</em> &nbsp;(bisakah kamu memelankan musiknya?)</li>
+    <li><em>Here you are.</em> &nbsp;(ini, silakan.) &nbsp;|&nbsp; <em>Go ahead.</em> &nbsp;(silakan lanjut.)</li>
+  </ul>
+
+  <div class="quiz" id="quiz2"></div>
+</section>
+
+<!-- ============ ACARA 3 ============ -->
+<section class="card" id="acara3">
+  <span class="acara-no">ACARA 3</span>
+  <h2>Locating Personal Items and Places</h2>
+  <p class="sub">Cara menanyakan dan menunjukkan lokasi benda serta tempat.</p>
+
+  <h3>1. Kapan pakai in, at, on?</h3>
+  <table>
+    <tr><th>Preposisi</th><th>Dipakai untuk</th><th>Contoh</th></tr>
+    <tr><td><strong>in</strong></td><td>area luas: kota, daerah, negara</td><td>in Jember, in Indonesia</td></tr>
+    <tr><td><strong>at</strong></td><td>tempat atau titik tertentu</td><td>at school, at the bus stop</td></tr>
+    <tr><td><strong>on</strong></td><td>di atas permukaan atau di sepanjang garis</td><td>on the table, on the coast</td></tr>
+  </table>
+
+  <h3>2. Posisi benda</h3>
+  <table>
+    <tr><th>Preposisi</th><th>Arti</th><th>Contoh</th></tr>
+    <tr><td>in front of</td><td>di depan</td><td>The car is in front of the house.</td></tr>
+    <tr><td>behind</td><td>di belakang</td><td>The toilet is behind the elevator.</td></tr>
+    <tr><td>next to</td><td>di sebelah</td><td>The bank is next to the school.</td></tr>
+    <tr><td>opposite</td><td>berhadapan</td><td>The park is opposite the mosque.</td></tr>
+    <tr><td>between</td><td>di antara dua benda</td><td>The cafe is between the bank and the bookstore.</td></tr>
+    <tr><td>under</td><td>di bawah</td><td>My bag is under the chair.</td></tr>
+  </table>
+
+  <h3>3. Bertanya dan menjawab lokasi</h3>
+  <div class="pattern">
+    Where is the library? &rarr; It's next to the office.<br>
+    Where are the keys? &rarr; They're on the table.
+  </div>
+  <p><strong>Aturannya:</strong> <em>is</em> untuk satu benda, <em>are</em> untuk lebih dari satu.</p>
+
+  <h3>4. Memberi petunjuk arah</h3>
+  <table>
+    <tr><th>Perintah</th><th>Arti</th></tr>
+    <tr><td>Go straight.</td><td>jalan lurus.</td></tr>
+    <tr><td>Turn left / Turn right.</td><td>belok kiri / belok kanan.</td></tr>
+    <tr><td>Go past the bank.</td><td>lewati bank.</td></tr>
+    <tr><td>Don't turn left.</td><td>jangan belok kiri.</td></tr>
+  </table>
+  <div class="tip"><strong>Tips menulis arah:</strong> sebutkan nama jalan, kata arah, dan minimal dua landmark.</div>
+
+  <div class="quiz" id="quiz3"></div>
+</section>
+
+<!-- ============ ACARA 4 ============ -->
+<section class="card" id="acara4">
+  <span class="acara-no">ACARA 4</span>
+  <h2>Expressing Apologies</h2>
+  <p class="sub">Cara meminta maaf dan cara menerima permintaan maaf.</p>
+
+  <h3>1. Langkah meminta maaf yang baik</h3>
+  <ol>
+    <li><strong>Minta perhatian.</strong> <em>Excuse me, can we talk about something?</em></li>
+    <li><strong>Sebutkan apa yang terjadi</strong> tanpa alasan. <em>I forgot to do my homework.</em></li>
+    <li><strong>Akui kesalahan dengan jujur.</strong> <em>I made a mistake.</em></li>
+    <li><strong>Ucapkan maaf.</strong> <em>I'm sorry</em> atau <em>I apologize</em>.</li>
+    <li><strong>Humor (opsional).</strong></li>
+    <li><strong>Beri waktu</strong> agar orang bisa memaafkan.</li>
+  </ol>
+
+  <div class="grid2">
+    <div class="block">
+      <h3>Meminta maaf</h3>
+      <ul>
+        <li>I'm sorry.</li>
+        <li>I apologize for...</li>
+        <li>Please, forgive me for...</li>
+        <li>It's all my fault.</li>
+      </ul>
+    </div>
+    <div class="block">
+      <h3>Menerima maaf</h3>
+      <ul>
+        <li>That's all right.</li>
+        <li>Don't worry about it.</li>
+        <li>No harm done.</li>
+        <li>Forget about it.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>2. Pola "apologize"</h3>
+  <table>
+    <tr><th>Pola</th><th>Contoh</th></tr>
+    <tr><td>apologize <strong>for</strong> + V-ing</td><td>I apologize for being angry last night.</td></tr>
+    <tr><td>apologize <strong>for</strong> + kata benda</td><td>I apologize for the inconvenience.</td></tr>
+    <tr><td>apologize <strong>to</strong> + orang</td><td>You should apologize to Samantha.</td></tr>
+  </table>
+
+  <div class="warn"><strong>Hati-hati:</strong> ucapkan <em>"I'm sorry I..."</em>, bukan <em>"I'm sorry if..."</em> atau <em>"I'm sorry you..."</em>. Dua kalimat terakhir terdengar seperti menyalahkan orang lain.</div>
+
+  <div class="quiz" id="quiz4"></div>
+</section>
+
+<!-- ============ ACARA 5 ============ -->
+<section class="card" id="acara5">
+  <span class="acara-no">ACARA 5</span>
+  <h2>Buying and Selling Personal Needs and Grocery</h2>
+  <p class="sub">Cara bertanya harga, meminta barang, dan mengembalikan barang.</p>
+
+  <h3>1. Menanyakan harga</h3>
+  <table>
+    <tr><th>Ungkapan</th><th>Arti</th></tr>
+    <tr><td>How much is this one?</td><td>berapa harga yang ini?</td></tr>
+    <tr><td>How much are these?</td><td>berapa harga yang ini (banyak)?</td></tr>
+    <tr><td>How much do the apples cost?</td><td>berapa harga apelnya?</td></tr>
+  </table>
+
+  <h3>2. Meminta dan mengembalikan barang</h3>
+  <ul>
+    <li><em>Can I have this one, please?</em> &nbsp;(boleh saya minta yang ini?)</li>
+    <li><em>I'd like to return this milk, please.</em> &nbsp;(saya ingin mengembalikan susu ini.)</li>
+    <li><em>Can I have a receipt?</em> &nbsp;(boleh saya minta struk?)</li>
+  </ul>
+
+  <h3>3. This, that, these, those</h3>
+  <table>
+    <tr><th>Kata</th><th>Jumlah</th><th>Jarak</th><th>Contoh</th></tr>
+    <tr><td>this</td><td>satu</td><td>dekat</td><td>This apple is fresh.</td></tr>
+    <tr><td>that</td><td>satu</td><td>jauh</td><td>That bag is expensive.</td></tr>
+    <tr><td>these</td><td>banyak</td><td>dekat</td><td>These eggs are fresh.</td></tr>
+    <tr><td>those</td><td>banyak</td><td>jauh</td><td>Those oranges are sweet.</td></tr>
+  </table>
+  <div class="tip"><strong>Cara mengingat:</strong> <em>this</em> dan <em>these</em> itu "di sini". <em>that</em> dan <em>those</em> itu "di sana". Huruf <em>s</em> berarti lebih dari satu.</div>
+
+  <h3>4. Some, any, much, many</h3>
+  <table>
+    <tr><th>Kata</th><th>Dipakai untuk</th><th>Contoh</th></tr>
+    <tr><td>some</td><td>kalimat positif</td><td>I have some friends in Jember.</td></tr>
+    <tr><td>any</td><td>kalimat tanya dan negatif</td><td>Is there any sugar? / There isn't any coffee.</td></tr>
+    <tr><td>many</td><td>benda yang bisa dihitung</td><td>How many chairs are there?</td></tr>
+    <tr><td>much</td><td>benda yang tidak bisa dihitung</td><td>How much orange juice is there?</td></tr>
+  </table>
+
+  <div class="warn"><strong>Hati-hati:</strong> <em>milk, rice, money, homework, advice</em> tidak punya bentuk jamak. Jadi salah jika menulis <em>advices</em> atau <em>homeworks</em>.</div>
+
+  <div class="quiz" id="quiz5"></div>
+</section>
+
+<!-- ============ ACARA 6 ============ -->
+<section class="card" id="acara6">
+  <span class="acara-no">ACARA 6</span>
+  <h2>Buying and Selling Currencies</h2>
+  <p class="sub">Cara menukar uang di bank atau tempat penukaran (money changer).</p>
+
+  <h3>1. Kosakata penting</h3>
+  <table>
+    <tr><th>English</th><th>Arti</th></tr>
+    <tr><td>currency</td><td>mata uang</td></tr>
+    <tr><td>exchange rate</td><td>nilai tukar</td></tr>
+    <tr><td>money exchange</td><td>tempat penukaran uang</td></tr>
+    <tr><td>commission / fee</td><td>biaya tambahan</td></tr>
+    <tr><td>small change</td><td>uang koin / kembalian kecil</td></tr>
+    <tr><td>receipt</td><td>struk / bukti pembayaran</td></tr>
+  </table>
+
+  <h3>2. Kode mata uang</h3>
+  <table>
+    <tr><th>Negara</th><th>Mata uang</th><th>Kode</th></tr>
+    <tr><td>Indonesia</td><td>Rupiah</td><td>IDR</td></tr>
+    <tr><td>USA</td><td>US Dollar</td><td>USD</td></tr>
+    <tr><td>Eropa (misal Belgia, Prancis)</td><td>Euro</td><td>EUR</td></tr>
+    <tr><td>Japan</td><td>Japanese Yen</td><td>JPY</td></tr>
+    <tr><td>UK</td><td>Pound Sterling</td><td>GBP</td></tr>
+  </table>
+
+  <h3>3. Contoh hitungan (kurs latihan, bukan kurs asli)</h3>
+  <div class="pattern">
+    Misal USD 1 = Rp15.000<br>
+    USD 4 &rarr; 4 &times; Rp15.000 = Rp60.000
+  </div>
+  <div class="warn"><strong>Hati-hati:</strong> kurs asli berubah setiap hari dan berbeda di setiap tempat. Selalu cek papan kurs.</div>
+
+  <h3>4. Dolar dan koin</h3>
+  <p>1 dolar = 100 pennies, 20 nickels, 10 dimes, atau 4 quarters. Jadi 10 dolar = <strong>40 quarters</strong>.</p>
+
+  <div class="quiz" id="quiz6"></div>
+</section>
+
+<footer>
+  <p><strong>Cara belajar yang efektif:</strong> baca penjelasan dulu, lalu kerjakan latihan tanpa melihat materi. Baca penjelasan di setiap jawaban, dan ulangi bagian yang masih salah.</p>
+  <p>Sumber materi: Bahan Belajar Basic English (BKPM) Acara 1 sampai 6.</p>
+</footer>
+
+</main>
+
+<script>
+const QUIZ = {
+1: [
+  { q: "I ___ a student.", o: ["am", "is", "are"], a: 0, w: [
+    "Benar. Untuk I selalu dipakai am.",
+    "Salah. Is dipakai untuk he, she, it, atau benda tunggal, bukan I.",
+    "Salah. Are dipakai untuk you, we, dan they, bukan I."] },
+  { q: "She ___ my teacher.", o: ["am", "is", "are"], a: 1, w: [
+    "Salah. Am hanya dipakai untuk I.",
+    "Benar. She memakai is.",
+    "Salah. Are dipakai untuk you, we, dan they."] },
+  { q: "Pertanyaan yang tepat untuk menanyakan ORANG adalah...", o: ["What is that?", "Who is she?", "Where is she?"], a: 1, w: [
+    "Salah. What dipakai untuk benda, bukan orang.",
+    "Benar. Who dipakai untuk menanyakan orang.",
+    "Salah. Where dipakai untuk menanyakan tempat."] },
+  { q: "Lucy and I are in a computer class. ___ class is at 9 A.M.", o: ["My", "Our", "Their"], a: 1, w: [
+    "Salah. My hanya untuk diri sendiri. Di sini ada Lucy dan saya.",
+    "Benar. Our dipakai karena kelasnya milik Lucy dan saya.",
+    "Salah. Their untuk mereka, bukan untuk kamu dan saya."] },
+  { q: "Penulisan gelar yang benar untuk Suzy Grant adalah...", o: ["Ms. Suzy", "Ms. Grant", "Mrs. Suzy"], a: 1, w: [
+    "Salah. Gelar selalu dipakai dengan nama keluarga, bukan nama depan.",
+    "Benar. Gunakan gelar dengan nama keluarga.",
+    "Salah. Nama depan tidak dipakai dengan gelar, dan Mrs. berarti wanita yang sudah menikah."] },
+  { q: "Pertanyaan untuk menanyakan umur adik adalah...", o: ["How old is your brother?", "What old is your brother?", "Where old is your brother?"], a: 0, w: [
+    "Benar. How old dipakai untuk menanyakan umur.",
+    "Salah. Urutannya harus How old.",
+    "Salah. Untuk umur selalu pakai How old."] },
+  { q: "Arti dari \"Where's she from?\" adalah...", o: ["Dia pekerjaannya apa?", "Dia berasal dari mana?", "Dia umurnya berapa?"], a: 1, w: [
+    "Salah. Itu arti What's her occupation?",
+    "Benar. Where dipakai untuk menanyakan asal atau tempat.",
+    "Salah. Itu arti How old is she?"] },
+  { q: "Bentuk yang benar untuk \"nama guru\" (satu guru) adalah...", o: ["teachers name", "teacher's name", "teachers' names"], a: 1, w: [
+    "Salah. Tanda kepemilikan ' wajib ada.",
+    "Benar. Guru hanya satu, jadi 's ditulis setelah teacher.",
+    "Salah. Ini berarti nama dari banyak guru, bukan satu guru."] }
+],
+2: [
+  { q: "Terjemahkan: \"Bisakah kamu membantuku?\"", o: ["Can you help me?", "Can you helping me?", "Can you to help me?"], a: 0, w: [
+    "Benar. Can diikuti kata kerja bentuk dasar.",
+    "Salah. Setelah can, kata kerja tetap bentuk dasar (help), tanpa -ing.",
+    "Salah. Setelah can tidak memakai to."] },
+  { q: "Could you ___ the door, please?", o: ["opened", "opening", "open"], a: 2, w: [
+    "Salah. Setelah could, pakai bentuk dasar, bukan -ed.",
+    "Salah. Bentuk -ing tidak dipakai setelah could.",
+    "Benar. Could you + kata kerja bentuk dasar."] },
+  { q: "Cara meminta tolong yang paling sopan adalah...", o: ["Help me!", "Could you help me, please?", "You help me."], a: 1, w: [
+    "Salah. Kalimat ini terdengar seperti perintah yang kasar.",
+    "Benar. Could dan please membuat permintaan lebih sopan.",
+    "Salah. Kalimat ini seperti perintah, bukan permintaan."] },
+  { q: "She is ___ pretty! (sebagai pujian)", o: ["too", "so", "not"], a: 1, w: [
+    "Salah. Too biasanya bermakna negatif, jadi tidak cocok untuk memuji.",
+    "Benar. So dipakai untuk pujian positif.",
+    "Salah. Not membuat kalimat menjadi negatif."] },
+  { q: "Arti dari \"This bag is too heavy.\" adalah...", o: ["Tas ini sangat ringan.", "Tas ini terlalu berat.", "Tas ini cukup berat."], a: 1, w: [
+    "Salah. Too bukan kebalikan dari ringan.",
+    "Benar. Too berarti terlalu, dan biasanya bermakna negatif.",
+    "Salah. Cukup berat bukan arti dari too."] },
+  { q: "Langkah pertama yang baik saat meminta bantuan adalah...", o: ["Langsung meminta tanpa penjelasan", "Menjelaskan dulu apa yang sudah kamu coba", "Diam sampai orang menawarkan"], a: 1, w: [
+    "Salah. Orang lebih mau membantu jika kamu sudah mencoba sendiri dan menjelaskannya.",
+    "Benar. Contoh: I tried restarting my laptop.",
+    "Salah. Kamu perlu meminta dengan jelas, tidak menunggu ditawari."] },
+  { q: "Respon yang tepat untuk \"Can you help me?\" jika kamu TIDAK bisa membantu adalah...", o: ["Sure.", "Sorry, I can't.", "Thank you."], a: 1, w: [
+    "Salah. Sure berarti setuju membantu.",
+    "Benar. Sorry, I can't adalah cara menolak dengan sopan.",
+    "Salah. Thank you adalah ucapan terima kasih, bukan penolakan."] },
+  { q: "Arti dari \"Do you mind if I open the window?\" adalah...", o: ["Apakah kamu keberatan jika saya membuka jendela?", "Kamu harus membuka jendela.", "Jendela sudah terbuka."], a: 0, w: [
+    "Benar. Do you mind if I... dipakai untuk meminta izin.",
+    "Salah. Itu perintah, bukan permintaan izin.",
+    "Salah. Kalimat ini tidak menanyakan kondisi jendela."] }
+],
+3: [
+  { q: "I live ___ Jember.", o: ["in", "at", "on"], a: 0, w: [
+    "Benar. In dipakai untuk kota dan daerah yang luas.",
+    "Salah. At dipakai untuk tempat yang spesifik, bukan kota.",
+    "Salah. On dipakai untuk permukaan atau garis."] },
+  { q: "\"Where is the bank?\" — \"It's ___ the school.\" (di sebelah sekolah)", o: ["next to", "under", "between"], a: 0, w: [
+    "Benar. Next to berarti di sebelah.",
+    "Salah. Under berarti di bawah.",
+    "Salah. Between dipakai untuk di antara dua benda."] },
+  { q: "The bank is ___ the police station and the mosque.", o: ["between", "behind", "in front of"], a: 0, w: [
+    "Benar. Between dipakai jika ada dua acuan (polisi dan masjid).",
+    "Salah. Behind berarti di belakang.",
+    "Salah. In front of berarti di depan, dan hanya satu acuan."] },
+  { q: "The shoes are ___ the bed. (di bawah tempat tidur)", o: ["on", "under", "at"], a: 1, w: [
+    "Salah. On berarti di atas permukaan.",
+    "Benar. Under berarti di bawah.",
+    "Salah. At dipakai untuk titik tertentu, bukan posisi di bawah."] },
+  { q: "Perintah untuk \"belok kanan\" adalah...", o: ["Turn right.", "Turns right.", "Turning right."], a: 0, w: [
+    "Benar. Perintah memakai kata kerja bentuk dasar.",
+    "Salah. Perintah tidak memakai -s.",
+    "Salah. Perintah tidak memakai -ing."] },
+  { q: "Arti dari \"Don't turn left.\" adalah...", o: ["Belok kiri.", "Jangan belok kiri.", "Silakan belok kiri."], a: 1, w: [
+    "Salah. Itu perintah positif, bukan larangan.",
+    "Benar. Don't berarti jangan.",
+    "Salah. Silakan belok kiri tidak sesuai dengan kata don't."] },
+  { q: "We wait ___ the bus stop.", o: ["in", "at", "on"], a: 1, w: [
+    "Salah. In dipakai untuk area yang luas.",
+    "Benar. At dipakai untuk titik atau tempat tertentu seperti halte.",
+    "Salah. On tidak tepat untuk halte."] },
+  { q: "The keys ___ on the table.", o: ["is", "are", "am"], a: 1, w: [
+    "Salah. Is untuk benda tunggal, sedangkan keys itu jamak.",
+    "Benar. Are dipakai untuk benda jamak.",
+    "Salah. Am hanya dipakai untuk I."] }
+],
+4: [
+  { q: "I apologize ___ coming late.", o: ["to", "for", "of"], a: 1, w: [
+    "Salah. To dipakai untuk orang (apologize to + orang).",
+    "Benar. Apologize for + V-ing.",
+    "Salah. Tidak ada pola apologize of."] },
+  { q: "I apologized ___ my teacher.", o: ["for", "to", "with"], a: 1, w: [
+    "Salah. For diikuti alasan atau V-ing, bukan orang.",
+    "Benar. Apologize to + orang.",
+    "Salah. Tidak ada pola apologize with."] },
+  { q: "Ungkapan meminta maaf yang paling tepat adalah...", o: ["I'm sorry if you were upset.", "I'm sorry I broke your cup.", "I'm sorry you were angry."], a: 1, w: [
+    "Salah. Pola I'm sorry if bisa terdengar seperti menyalahkan orang lain.",
+    "Benar. Sebutkan kesalahannya dengan pola I'm sorry I...",
+    "Salah. Pola I'm sorry you juga terdengar menyalahkan orang lain."] },
+  { q: "Seseorang berkata \"I'm sorry I was late.\" Respon untuk menerima maaf adalah...", o: ["That's all right.", "I'm not listening.", "Go away."], a: 0, w: [
+    "Benar. That's all right adalah cara menerima maaf.",
+    "Salah. Ini respon yang kasar dan tidak menerima maaf.",
+    "Salah. Ini kalimat kasar, tidak sesuai untuk menerima maaf."] },
+  { q: "Langkah pertama dalam meminta maaf adalah...", o: ["Menyebut alasan", "Minta perhatian dulu", "Tertawa"], a: 1, w: [
+    "Salah. Alasan tidak disebut di langkah pertama. Kamu harus jujur mengakui kesalahan tanpa alasan.",
+    "Benar. Contoh: Excuse me, can we talk about something?",
+    "Salah. Humor bersifat opsional dan tidak selalu tepat."] },
+  { q: "Terjemahkan: \"Saya minta maaf karena terlambat.\"", o: ["I'm late sorry.", "I'm sorry I'm late.", "Sorry if I late."], a: 1, w: [
+    "Salah. Susunan katanya tidak tepat.",
+    "Benar. I'm sorry I'm late.",
+    "Salah. Kata kerja am hilang dan pola if tidak tepat."] },
+  { q: "Untuk meminta maaf karena TIDAK datang, kalimat yang benar adalah...", o: ["I apologize for not coming.", "I apologize for come.", "I apologize to not coming."], a: 0, w: [
+    "Benar. Tambahkan not sebelum V-ing untuk hal yang tidak dilakukan.",
+    "Salah. Setelah for harus V-ing (coming).",
+    "Salah. Setelah to tidak dipakai kegiatan."] },
+  { q: "Dalam percakapan Noelia: \"It's fine. Don't worry about it.\" Noelia sebenarnya...", o: ["Marah", "Memaafkan dan tidak khawatir", "Menolak maaf"], a: 1, w: [
+    "Salah. Don't worry berarti tidak perlu khawatir, bukan marah.",
+    "Benar. Noelia menerima maaf Paul.",
+    "Salah. Menolak maaf adalah kebalikan dari kalimat Don't worry."] }
+],
+5: [
+  { q: "Shall I wear this shirt or ___ one? (baju lain yang agak jauh)", o: ["that", "those", "this"], a: 0, w: [
+    "Benar. That one dipakai untuk benda tunggal yang agak jauh.",
+    "Salah. Those untuk benda jamak.",
+    "Salah. This sudah disebut di awal kalimat, jadi di sini pakai that."] },
+  { q: "___ eggs over there are fresh. (telur jamak yang jauh)", o: ["These", "Those", "This"], a: 1, w: [
+    "Salah. These untuk jamak yang dekat.",
+    "Benar. Those untuk jamak yang jauh (over there).",
+    "Salah. This untuk benda tunggal."] },
+  { q: "\"How much is ___ one?\" (sambil memegang barang yang dekat)", o: ["this", "those", "these"], a: 0, w: [
+    "Benar. This untuk benda tunggal yang dekat.",
+    "Salah. Those untuk jamak dan jauh.",
+    "Salah. These untuk benda jamak, sedangkan one itu tunggal."] },
+  { q: "Do you have ___ tea?", o: ["some", "any", "many"], a: 1, w: [
+    "Salah. Some umumnya dipakai di kalimat positif.",
+    "Benar. Any dipakai di kalimat tanya.",
+    "Salah. Many dipakai untuk benda yang bisa dihitung."] },
+  { q: "There is ___ sugar on the table.", o: ["any", "some", "many"], a: 1, w: [
+    "Salah. Any biasanya dipakai di kalimat tanya atau negatif.",
+    "Benar. Some dipakai di kalimat positif.",
+    "Salah. Many dipakai untuk benda yang bisa dihitung, sedangkan sugar tidak."] },
+  { q: "How ___ photos did you take?", o: ["much", "many", "some"], a: 1, w: [
+    "Salah. Much dipakai untuk benda yang tidak bisa dihitung.",
+    "Benar. Photos bisa dihitung, jadi pakai many.",
+    "Salah. Some tidak dipakai di pertanyaan seperti ini."] },
+  { q: "Sarah doesn't buy ___ fish.", o: ["some", "any", "many"], a: 1, w: [
+    "Salah. Some tidak dipakai di kalimat negatif.",
+    "Benar. Any dipakai di kalimat negatif.",
+    "Salah. Many tidak tepat untuk fish di kalimat ini."] },
+  { q: "Mana bentuk yang benar?", o: ["advices", "advice", "homeworks"], a: 1, w: [
+    "Salah. Advice tidak punya bentuk jamak.",
+    "Benar. Advice adalah kata yang tidak bisa dihitung.",
+    "Salah. Homework juga tidak bisa dihitung, jadi homeworks salah."] }
+],
+6: [
+  { q: "Arti dari \"exchange rate\" adalah...", o: ["Nilai tukar", "Biaya tambahan", "Uang kembalian"], a: 0, w: [
+    "Benar. Exchange rate adalah nilai tukar antar mata uang.",
+    "Salah. Biaya tambahan adalah fee atau commission.",
+    "Salah. Uang kembalian adalah small change."] },
+  { q: "Dengan kurs contoh USD 1 = Rp15.000, USD 4 sama dengan...", o: ["Rp15.000", "Rp60.000", "Rp150.000"], a: 1, w: [
+    "Salah. Itu hanya untuk 1 dolar.",
+    "Benar. 4 × Rp15.000 = Rp60.000.",
+    "Salah. Itu untuk USD 10, bukan USD 4."] },
+  { q: "Berapa quarter yang sama dengan 10 dolar?", o: ["4", "10", "40"], a: 2, w: [
+    "Salah. 4 quarter hanya sama dengan 1 dolar.",
+    "Salah. 10 quarter hanya sama dengan 2,5 dolar.",
+    "Benar. 10 × 4 quarter = 40 quarter."] },
+  { q: "I need some ___ about my future.", o: ["advices", "advice", "an advice"], a: 1, w: [
+    "Salah. Advice tidak punya bentuk jamak.",
+    "Benar. Advice tidak bisa dihitung, jadi dipakai some advice.",
+    "Salah. An advice tidak dipakai karena advice tidak bisa dihitung."] },
+  { q: "I drank two ___ of water.", o: ["glass", "glasses", "glassed"], a: 1, w: [
+    "Salah. Kata dua membutuhkan bentuk jamak.",
+    "Benar. Gelas bisa dihitung, jadi pakai bentuk jamak.",
+    "Salah. Glassed bukan kata benda."] },
+  { q: "Kalimat untuk menanyakan nilai tukar hari ini adalah...", o: ["What's today's exchange rate?", "How old is today's rate?", "Where is today's rate?"], a: 0, w: [
+    "Benar. Kalimat ini dipakai untuk menanyakan nilai tukar.",
+    "Salah. How old dipakai untuk umur.",
+    "Salah. Where dipakai untuk tempat."] },
+  { q: "Kalimat untuk meminta struk adalah...", o: ["Can I have a receipt?", "Can I have a rocket?", "Receipt I want."], a: 0, w: [
+    "Benar. Can I have a receipt? adalah cara sopan meminta struk.",
+    "Salah. Rocket tidak berhubungan dengan penukaran uang.",
+    "Salah. Susunan katanya tidak tepat dan terdengar kasar."] },
+  { q: "Arti dari \"Is there any commission?\" adalah...", o: ["Apakah ada biaya komisi?", "Berapa umur kamu?", "Di mana bank?"], a: 0, w: [
+    "Benar. Commission berarti komisi.",
+    "Salah. Itu arti How old are you?",
+    "Salah. Itu arti Where is the bank?"] },
+  { q: "Kode mata uang Jepang adalah...", o: ["JPY", "GBP", "IDR"], a: 0, w: [
+    "Benar. JPY adalah kode Japanese Yen.",
+    "Salah. GBP adalah kode Pound Sterling (Inggris).",
+    "Salah. IDR adalah kode Rupiah (Indonesia)."] },
+  { q: "Small change artinya...", o: ["Uang besar", "Uang koin atau kembalian kecil", "Nilai tukar"], a: 1, w: [
+    "Salah. Uang besar bukan arti small change.",
+    "Benar. Small change adalah uang koin atau kembalian kecil.",
+    "Salah. Nilai tukar adalah exchange rate."] }
+]
+};
+
+function buildQuiz(n) {
+  const box = document.getElementById('quiz' + n);
+  box.innerHTML = '';
+  const items = QUIZ[n];
+  let score = 0, done = 0;
+
+  const head = document.createElement('div');
+  head.className = 'quiz-head';
+  const title = document.createElement('h3');
+  title.textContent = 'Latihan Pilihan Ganda';
+  title.style.margin = '0';
+  const score_el = document.createElement('p');
+  score_el.className = 'score';
+  const reset = document.createElement('button');
+  reset.type = 'button';
+  reset.className = 'reset';
+  reset.textContent = 'Ulangi latihan';
+  head.append(title, score_el, reset);
+  box.appendChild(head);
+
+  function updScore() {
+    score_el.textContent = 'Skor: ' + score + ' dari ' + items.length + ' (terjawab ' + done + ')';
+  }
+  reset.addEventListener('click', () => buildQuiz(n));
+
+  items.forEach((it, i) => {
+    const wrap = document.createElement('div');
+    wrap.className = 'qitem';
+    const qp = document.createElement('p');
+    qp.className = 'qtext';
+    qp.textContent = (i + 1) + '. ' + it.q;
+    wrap.appendChild(qp);
+
+    const opts = document.createElement('div');
+    opts.className = 'opts';
+    const fb = document.createElement('div');
+    fb.className = 'fb';
+    fb.hidden = true;
+    let answered = false;
+
+    it.o.forEach((txt, k) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'opt';
+      b.textContent = String.fromCharCode(65 + k) + '. ' + txt;
+      b.addEventListener('click', () => {
+        if (answered) return;
+        answered = true;
+        done++;
+        const ok = k === it.a;
+        if (ok) score++;
+        b.classList.add(ok ? 'right' : 'wrong');
+        const buttons = opts.querySelectorAll('button');
+        buttons.forEach(x => x.disabled = true);
+        if (!ok) buttons[it.a].classList.add('right');
+
+        fb.className = 'fb ' + (ok ? 'ok' : 'no');
+        fb.innerHTML = '';
+        const head2 = document.createElement('strong');
+        head2.textContent = ok ? 'Benar!' : 'Belum tepat.';
+        fb.appendChild(head2);
+        const p1 = document.createElement('p');
+        p1.textContent = it.w[k];
+        fb.appendChild(p1);
+        if (!ok) {
+          const p2 = document.createElement('p');
+          p2.textContent = 'Jawaban yang benar: ' + String.fromCharCode(65 + it.a) + '. ' + it.o[it.a] + '. ' + it.w[it.a];
+          fb.appendChild(p2);
+        }
+        fb.hidden = false;
+        updScore();
+      });
+      opts.appendChild(b);
+    });
+
+    wrap.appendChild(opts);
+    wrap.appendChild(fb);
+    box.appendChild(wrap);
+  });
+  updScore();
+}
+
+[1, 2, 3, 4, 5, 6].forEach(buildQuiz);
+</script>
+</body>
+</html>
+
+</body></html>

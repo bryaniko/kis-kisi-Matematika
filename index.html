@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kisi-Kisi Ujian</title>
+<style>
+  :root {
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --bg: #f8fafc;
+    --white: #ffffff;
+    --brand-1: #4f46e5;
+    --brand-2: #0ea5e9;
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--brand-1) 0%, var(--brand-2) 100%);
+    color: #fff;
+    padding: 72px 20px 110px;
+    text-align: center;
+  }
+  .hero::before, .hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,.12);
+    pointer-events: none;
+  }
+  .hero::before { width: 380px; height: 380px; top: -140px; left: -100px; }
+  .hero::after  { width: 260px; height: 260px; bottom: -120px; right: -60px; }
+  .hero-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,.18);
+    border: 1px solid rgba(255,255,255,.3);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: .85rem;
+    font-weight: 600;
+    letter-spacing: .02em;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.15;
+  }
+  .hero p { margin: 0 auto; max-width: 560px; opacity: .92; font-size: 1.05rem; }
+
+  /* ---------- SEARCH ---------- */
+  .search-wrap {
+    position: relative;
+    max-width: 560px;
+    margin: -30px auto 0;
+    padding: 0 16px;
+    z-index: 2;
+  }
+  .search {
+    width: 100%;
+    padding: 16px 18px 16px 48px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--white);
+    color: var(--ink);
+    font: inherit;
+    font-size: 1rem;
+    box-shadow: 0 12px 30px -12px rgba(15,23,42,.25);
+    outline: none;
+    transition: border-color .15s, box-shadow .15s;
+  }
+  .search:focus { border-color: var(--brand-1); box-shadow: 0 0 0 4px rgba(79,70,229,.15); }
+  .search-icon {
+    position: absolute;
+    left: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    pointer-events: none;
+  }
+
+  /* ---------- MAIN ---------- */
+  main { max-width: 1040px; margin: 0 auto; padding: 44px 16px 72px; }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  .section-head h2 { margin: 0; font-size: 1.35rem; font-weight: 700; }
+  .section-head span { color: var(--muted); font-size: .92rem; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  /* ---------- CARD ---------- */
+  .card {
+    --accent: var(--brand-1);
+    --accent-soft: #eef2ff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: inherit;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 4px;
+    background: var(--accent);
+  }
+  .card:hover, .card:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -18px rgba(15,23,42,.28);
+    border-color: transparent;
+    outline: none;
+  }
+  .card.c-indigo { --accent: #4f46e5; --accent-soft: #eef2ff; }
+  .card.c-emerald { --accent: #059669; --accent-soft: #ecfdf5; }
+  .card.c-amber { --accent: #d97706; --accent-soft: #fffbeb; }
+  .card.c-rose { --accent: #e11d48; --accent-soft: #fff1f2; }
+
+  .card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .icon {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    background: var(--accent-soft);
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+  }
+  .count {
+    font-size: .78rem;
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 4px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .card h3 { margin: 4px 0 0; font-size: 1.2rem; font-weight: 700; }
+  .card p { margin: 0; color: var(--muted); font-size: .95rem; flex: 1; }
+  .card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    border-top: 1px dashed var(--line);
+    color: var(--accent);
+    font-weight: 600;
+    font-size: .92rem;
+  }
+  .arrow { transition: transform .2s ease; }
+  .card:hover .arrow { transform: translateX(4px); }
+
+  .empty {
+    display: none;
+    text-align: center;
+    color: var(--muted);
+    padding: 48px 0;
+    background: var(--white);
+    border: 1px dashed var(--line);
+    border-radius: var(--radius);
+  }
+  .empty.show { display: block; }
+
+  footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: .88rem;
+    padding: 24px 16px 40px;
+  }
+
+  @media (max-width: 520px) {
+    .hero { padding: 56px 16px 96px; }
+    .search { padding-left: 46px; }
+    .search-icon { left: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="badge">Persiapan Ujian</span>
+    <h1>Kisi-Kisi Ujian</h1>
+    <p>Pilih materi untuk melihat kisi-kisi dan mengunduh file PDF pendukung belajar.</p>
+  </div>
+</section>
+
+<div class="search-wrap">
+  <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <circle cx="11" cy="11" r="7"></circle><path d="m20 20-3.5-3.5"></path>
+  </svg>
+  <input class="search" id="cari" type="search" placeholder="Cari materi, misalnya matematika…" aria-label="Cari materi">
+</div>
+
+<main>
+  <div class="section-head">
+    <h2>Daftar Materi</h2>
+    <span id="jumlah"></span>
+  </div>
+
+  <div class="grid" id="grid">
+
+    <!-- Isi href dengan nama file halaman kisi-kisi nanti, misalnya "kisi-kisi-matematika.html" -->
+    <a class="card c-indigo" href="Kisi-Kisi-Basic-English.html" data-cari="basic english grammar vocabulary">
+      <div class="card-top">
+        <div class="icon" aria-hidden="true">📐</div>
+        <span class="count">3 kisi-kisi</span>
+      </div>
+      <div>
+        <h3>Basic English</h3>
+        <p>Basic English dasar untuk ujian semester.</p>
+      </div>
+      <div class="card-foot">Lihat kisi-kisi <span class="arrow">→</span></div>
+    </a>
+
+    <a class="card c-emerald" href="Kisi-Kisi-algoritma.html" data-cari="ipa sains biologi energi">
+      <div class="card-top">
+        <div class="icon" aria-hidden="true">🔬</div>
+        <span class="count">2 kisi-kisi</span>
+      </div>
+      <div>
+        <h3>algoritma</h3>
+        <p>Kisi Kisi algoritma.</p>
+      </div>
+      <div class="card-foot">Lihat kisi-kisi <span class="arrow">→</span></div>
+    </a>
+
+    <a class="card c-amber" href="" data-cari="bahasa indonesia eksposisi kalimat">
+      <div class="card-top">
+        <div class="icon" aria-hidden="true">📝</div>
+        <span class="count">2 kisi-kisi</span>
+      </div>
+      <div>
+        <h3>Bahasa Indonesia</h3>
+        <p>Teks eksposisi, teks narasi, dan kaidah kebahasaan.</p>
+      </div>
+      <div class="card-foot">Lihat kisi-kisi <span class="arrow">→</span></div>
+    </a>
+
+  </div>
+
+  <div class="empty" id="kosong">
+    <p><strong>Materi tidak ditemukan</strong></p>
+    <p>Coba kata kunci lain.</p>
+  </div>
+</main>
+
+<footer>© Kisi-Kisi Ujian · Semoga sukses!</footer>
+
+<script>
+  const input = document.getElementById("cari");
+  const cards = [...document.querySelectorAll(".card")];
+  const kosong = document.getElementById("kosong");
+  const jumlah = document.getElementById("jumlah");
+
+  function filter() {
+    const k = input.value.trim().toLowerCase();
+    let tampil = 0;
+    cards.forEach(c => {
+      const teks = (c.dataset.cari + " " + c.textContent).toLowerCase();
+      const cocok = teks.includes(k);
+      c.style.display = cocok ? "" : "none";
+      if (cocok) tampil++;
+    });
+    kosong.classList.toggle("show", tampil === 0);
+    jumlah.textContent = `${tampil} materi`;
+  }
+
+  input.addEventListener("input", filter);
+  filter();
+</script>
+</body>
+</html>
