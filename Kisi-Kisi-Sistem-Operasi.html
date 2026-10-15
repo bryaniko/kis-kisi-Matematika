@@ -1,0 +1,692 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Kisi-Kisi UTS Sistem Operasi</title>
+<style>
+/* Layout: single column reading width, sticky section nav, tables scroll inside their own box. */
+:root {
+  --bg:#f6f7f9; --fg:#1d2430; --muted:#5b6575; --brand:#1f4e79; --accent:#0f766e;
+  --soft:#e9f0f8; --line:#d6dde8; --surf:#ffffff; --zebra:#f5f8fb; --tip:#e7f6f3; --tipb:#0f766e; --warn:#fff5e1; --warnb:#c98a1b; --warnfg:#7a4f00;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg:#12161d; --fg:#e4e8ef; --muted:#9aa4b2; --brand:#8ab8e6; --accent:#5fd1c2; --soft:#1c2633; --line:#2c3644; --surf:#171d26; --zebra:#1b2230; --tip:#14302d; --tipb:#5fd1c2; --warn:#33270f; --warnb:#e0a94a; --warnfg:#f2cf86; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg:#12161d; --fg:#e4e8ef; --muted:#9aa4b2; --brand:#8ab8e6; --accent:#5fd1c2; --soft:#1c2633; --line:#2c3644; --surf:#171d26; --zebra:#1b2230; --tip:#14302d; --tipb:#5fd1c2; --warn:#33270f; --warnb:#e0a94a; --warnfg:#f2cf86; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--fg); font-family:"Source Sans 3","Segoe UI",Roboto,"Liberation Sans",Arial,sans-serif; font-size:16px; line-height:1.6; padding-left:max(16px, env(safe-area-inset-left,0px)); padding-right:max(16px, env(safe-area-inset-right,0px)); }
+.wrap { max-width:900px; margin:0 auto; padding-block:28px 56px; }
+h1 { font-family:"Source Serif 4",Georgia,"Times New Roman",serif; font-size:clamp(28px,5vw,38px); line-height:1.15; color:var(--brand); margin:0 0 6px; text-wrap:balance; }
+.subtitle { color:var(--muted); margin-bottom:20px; }
+h2 { font-family:"Source Serif 4",Georgia,serif; font-size:clamp(22px,3.4vw,27px); color:var(--brand); margin:44px 0 12px; padding-bottom:8px; border-bottom:2px solid var(--brand); scroll-margin-top:70px; text-wrap:balance; }
+h3 { font-size:19px; color:var(--brand); margin:30px 0 8px; scroll-margin-top:70px; }
+h4 { font-size:15px; text-transform:uppercase; letter-spacing:.06em; color:var(--accent); margin:20px 0 6px; }
+p { margin:8px 0; max-width:72ch; }
+ul, ol { margin:6px 0 10px; padding-left:22px; }
+li { margin:3px 0; }
+code { font-family:"JetBrains Mono","Consolas","Liberation Mono",monospace; font-size:.9em; background:var(--soft); padding:1px 5px; border-radius:4px; }
+.small { font-size:14px; color:var(--muted); }
+.topnav { position:sticky; top:env(safe-area-inset-top,0px); z-index:10; background:var(--bg); border-bottom:1px solid var(--line); }
+.navin { max-width:900px; margin:0 auto; display:flex; gap:8px; align-items:center; overflow-x:auto; padding:10px 0; }
+.navin a { flex:none; text-decoration:none; color:var(--brand); background:var(--surf); border:1px solid var(--line); padding:6px 12px; border-radius:999px; font-size:14px; }
+.navin a:hover, .navin a:focus-visible { border-color:var(--brand); }
+.nav-actions { margin-left:auto; display:flex; align-items:center; gap:8px; flex:none; }
+#theme { margin-left:0; flex:none; font:inherit; font-size:14px; color:var(--fg); background:var(--surf); border:1px solid var(--line); border-radius:999px; padding:6px 12px; cursor:pointer; }
+.download-btn { display:inline-flex; align-items:center; justify-content:center; gap:7px; flex:none; text-decoration:none; font:inherit; font-size:14px; font-weight:600; color:#fff; background:linear-gradient(135deg,#1f4e79,#0f766e); border:1px solid transparent; border-radius:999px; padding:7px 13px; cursor:pointer; transition:transform .18s ease, box-shadow .18s ease; white-space:nowrap; }
+.download-btn:hover { color:#fff; transform:translateY(-1px); box-shadow:0 4px 12px rgba(31,78,121,.22); }
+.download-btn svg { width:16px; height:16px; }
+#theme:focus-visible, a:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+@media (max-width:560px) { .download-btn { padding:7px 10px; font-size:13px; } .nav-actions { gap:6px; } }
+.cover { background:var(--surf); border:1px solid var(--line); border-radius:10px; padding:16px 18px; margin:0 0 8px; }
+.cover table { width:100%; }
+.cover td { padding:3px 8px 3px 0; vertical-align:top; border:none; background:none !important; }
+.tw { overflow-x:auto; margin:10px 0 14px; border:1px solid var(--line); border-radius:8px; background:var(--surf); }
+table { border-collapse:collapse; width:100%; font-size:15px; }
+th { background:var(--brand); color:var(--bg); text-align:left; padding:8px 10px; font-weight:600; }
+td { padding:7px 10px; border-top:1px solid var(--line); vertical-align:top; }
+tr:nth-child(even) td { background:var(--zebra); }
+.cover td, .cover tr td { background:none; }
+.tw table tr td:first-child { }
+.box, .warn, .analogi { border-radius:8px; padding:12px 14px; margin:12px 0; }
+.box { background:var(--tip); border-left:4px solid var(--tipb); }
+.analogi { background:var(--tip); border-left:4px solid var(--tipb); }
+.warn { background:var(--warn); border-left:4px solid var(--warnb); color:var(--warnfg); }
+.box b.lbl, .analogi b.lbl { color:var(--tipb); }
+.warn b.lbl { color:var(--warnb); }
+.formula { background:var(--soft); border:1px dashed var(--line); border-radius:8px; padding:10px 12px; margin:10px 0; font-family:"JetBrains Mono","Consolas","Liberation Mono",monospace; font-size:14px; overflow-x:auto; }
+.gantt { table-layout:auto; margin:6px 0 12px; }
+.gantt td { text-align:center; background:var(--soft) !important; border:1px solid var(--line); font-weight:600; font-size:14px; white-space:nowrap; }
+.qa { background:var(--surf); border:1px solid var(--line); border-radius:10px; padding:12px 14px; margin:12px 0; }
+.qa .q { font-weight:600; color:var(--brand); }
+.qa .a { margin-top:6px; }
+.toc table { font-size:16px; }
+.toc td { border:none; background:none !important; padding:3px 6px; }
+.toc tr td { border:none; }
+.gantt-t { display:none; }
+@media (max-width:560px) {
+  th, td { padding:6px 7px; font-size:14px; }
+  h3 { font-size:17px; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior:auto !important; } }
+</style>
+</head>
+<body>
+<nav class="topnav" aria-label="Daftar bagian"><div class="navin">
+<a href="#a-kisi-kisi-soal">A. Kisi-kisi</a><a href="#b-penjelasan-materi">B. Materi</a><a href="#c-latihan-soal-amp-pembahasan">C. Latihan</a><a href="#d-glosarium-istilah-penting">D. Glosarium</a>
+<div class="nav-actions">
+  <a class="download-btn" href="Kisi-Kisi%20UTS%20Sistem%20Operasi.pdf" download="Kisi-Kisi UTS Sistem Operasi.pdf" aria-label="Download file PDF">
+    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17v3h14v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    Download PDF
+  </a>
+  <button id="theme" type="button" aria-label="Ganti tema">Tema</button>
+</div></div></nav>
+<main class="wrap">
+
+<h1>Kisi-Kisi UTS Sistem Operasi</h1>
+<div class="subtitle">Semester 1 &middot; Materi: Pengantar OS, Struktur OS, Proses, IPC, Thread, dan CPU Scheduling</div>
+
+<section class="cover">
+<div class="tw"><table>
+<tr><td><b>Mata kuliah</b></td><td>: Sistem Operasi</td></tr>
+<tr><td><b>Jenis ujian</b></td><td>: UTS (Ujian Tengah Semester)</td></tr>
+<tr><td><b>Sumber materi</b></td><td>: Silberschatz, <i>Operating System Concepts</i> 10th Ed. (Bab 1, 4, 5 dan Bab 2 &amp; Konsep Proses dari materi kuliah)</td></tr>
+</table></div>
+<p class="small" style="margin-top:6px">Cara pakai: baca <b>Bagian A</b> untuk tahu cakupan soal, <b>Bagian B</b> untuk memahami materi, lalu kerjakan <b>Bagian C</b> sebagai latihan. Istilah Inggris penting ada di <b>Bagian D</b>.</p>
+</section>
+
+<h3 id="daftar-isi">Daftar Isi</h3>
+<div class="tw"><table class="toc">
+<tr><td>A.</td><td>Kisi-kisi soal (cakupan dan indikator)</td></tr>
+<tr><td>B.</td><td>Penjelasan materi (dibahas per topik)</td></tr>
+<tr><td>C.</td><td>Latihan soal dan pembahasan (termasuk cara hitung CPU scheduling)</td></tr>
+<tr><td>D.</td><td>Glosarium istilah penting</td></tr>
+</table></div>
+
+<!-- ============ BAGIAN A ============ -->
+<h2 id="a-kisi-kisi-soal">A. Kisi-Kisi Soal</h2>
+<p>Tabel ini menunjukkan <b>apa yang harus bisa kamu jelaskan atau kerjakan</b> di setiap topik. Kolom "Bentuk soal" adalah perkiraan berdasarkan materi, bukan kepastian.</p>
+
+<div class="tw"><table>
+<tr><th style="width:4%">No</th><th style="width:20%">Materi</th><th>Indikator (kamu harus bisa&hellip;)</th><th style="width:17%">Bentuk soal (perkiraan)</th></tr>
+<tr><td>1</td><td>Pengertian &amp; tujuan OS</td><td>Menjelaskan definisi OS, tiga tujuannya, dan peran OS sebagai <i>resource allocator</i> dan <i>control program</i></td><td>Essay singkat / PG</td></tr>
+<tr><td>2</td><td>Komponen sistem komputer</td><td>Menyebutkan 4 komponen (hardware, OS, aplikasi, user) dan menjelaskan fungsinya</td><td>Essay / PG</td></tr>
+<tr><td>3</td><td>Interrupt &amp; trap</td><td>Menjelaskan fungsi interrupt, ISR, interrupt vector, dan perbedaan interrupt dengan trap</td><td>Essay</td></tr>
+<tr><td>4</td><td>Dual mode &amp; timer</td><td>Membedakan user mode dan kernel mode, serta menjelaskan cara kerja mode bit dan timer</td><td>Essay / PG</td></tr>
+<tr><td>5</td><td>Hierarki &amp; caching memori</td><td>Mengurutkan memori dari tercepat ke terlambat; menjelaskan konsep caching</td><td>PG / Essay</td></tr>
+<tr><td>6</td><td>Batch vs time-sharing</td><td>Membedakan multiprogramming dan multitasking (time-sharing)</td><td>PG / Essay</td></tr>
+<tr><td>7</td><td>Layanan &amp; antarmuka OS</td><td>Menyebutkan layanan OS untuk user dan untuk efisiensi sistem; membedakan CLI dan GUI</td><td>PG / Essay</td></tr>
+<tr><td>8</td><td>System call</td><td>Menjelaskan fungsi system call, API, dan 5 kategorinya; menjelaskan perubahan mode saat system call</td><td>Essay</td></tr>
+<tr><td>9</td><td>Struktur OS</td><td>Membandingkan monolitik, layered, microkernel, modular (LKM), dan hybrid (kelebihan, kelemahan, contoh)</td><td>Essay / tabel</td></tr>
+<tr><td>10</td><td>Booting</td><td>Mengurutkan tahap booting (BIOS/UEFI &rarr; bootloader &rarr; kernel &rarr; init)</td><td>PG / urutan</td></tr>
+<tr><td>11</td><td>Konsep proses &amp; PCB</td><td>Membedakan program dan proses; menyebutkan 5 status proses dan isi PCB</td><td>PG / Essay</td></tr>
+<tr><td>12</td><td>Penjadwal &amp; context switch</td><td>Membedakan short-term, long-term, medium-term scheduler; menjelaskan context switch dan overhead-nya</td><td>PG / Essay</td></tr>
+<tr><td>13</td><td>Operasi proses</td><td>Menjelaskan fork(), exec(), exit(), wait(), abort(); menjelaskan zombie dan orphan</td><td>Essay</td></tr>
+<tr><td>14</td><td>IPC (komunikasi antar-proses)</td><td>Membandingkan shared memory dan message passing; menjelaskan producer-consumer, pipe, socket, RPC</td><td>Essay / tabel</td></tr>
+<tr><td>15</td><td>Thread &amp; multithreading</td><td>Menjelaskan komponen thread, beda proses vs thread, dan 4 keuntungan multithreading</td><td>PG / Essay</td></tr>
+<tr><td>16</td><td>Konkurensi &amp; paralelisme</td><td>Membedakan concurrency dan parallelism; data vs task parallelism; <b>menghitung speedup Amdahl</b></td><td>Essay / <b>hitungan</b></td></tr>
+<tr><td>17</td><td>Model multithreading</td><td>Membedakan user vs kernel thread; menjelaskan many-to-one, one-to-one, many-to-many</td><td>Essay / tabel</td></tr>
+<tr><td>18</td><td>Thread library &amp; implicit threading</td><td>Menyebutkan Pthreads, Windows, Java threads; menjelaskan thread pool, OpenMP, GCD</td><td>PG / Essay</td></tr>
+<tr><td>19</td><td>Isu multithreading</td><td>Menjelaskan dilema fork(), asynchronous vs deferred cancellation, signal handling, TLS</td><td>Essay</td></tr>
+<tr><td>20</td><td>CPU scheduling &ndash; konsep</td><td>Membedakan preemptive vs nonpreemptive; menyebutkan 5 kriteria penjadwalan dan arti tiap kriteria</td><td>PG / Essay</td></tr>
+<tr><td>21</td><td>Algoritma FCFS, SJF, RR, Priority</td><td>Menggambar Gantt chart dan <b>menghitung average waiting time</b> untuk tiap algoritma; menjelaskan starvation dan aging</td><td><b>Hitungan</b> + essay</td></tr>
+</table></div>
+
+<div class="box"><b class="lbl">Prioritas belajar:</b> Topik nomor 16, 20, dan 21 berisi <b>perhitungan</b>, jadi latihannya perlu dikerjakan sendiri, bukan hanya dibaca. Topik lain cukup dipahami dengan membuat ringkasan singkat dengan kata-katamu sendiri.</div>
+
+<!-- ============ BAGIAN B ============ -->
+<h2 id="b-penjelasan-materi">B. Penjelasan Materi</h2>
+
+<h3 id="b-1-pengantar-sistem-operasi-bab-1">B.1 Pengantar Sistem Operasi (Bab 1)</h3>
+
+<h4>Apa itu Sistem Operasi?</h4>
+<p>Sistem operasi (OS) adalah <b>program perantara</b> antara pengguna (user) dan perangkat keras (hardware) komputer. Tiga tujuannya:</p>
+<ol>
+  <li>Menjalankan program user dan memudahkan user menyelesaikan masalahnya.</li>
+  <li>Membuat komputer nyaman dipakai.</li>
+  <li>Memakai hardware secara efisien.</li>
+</ol>
+<div class="box"><b class="lbl">Analogi:</b> OS seperti <i>manajer gedung</i>. Penyewa (program) boleh memakai ruangan (CPU, memori, printer), tapi manajer yang mengatur siapa dapat giliran dan mencegah kekacauan.</div>
+
+<h4>Empat komponen sistem komputer</h4>
+<div class="tw"><table>
+<tr><th style="width:22%">Komponen</th><th>Penjelasan</th><th style="width:28%">Contoh</th></tr>
+<tr><td>Hardware</td><td>Menyediakan sumber daya komputasi dasar: CPU, memori, perangkat I/O</td><td>CPU, RAM, disk, keyboard</td></tr>
+<tr><td>Sistem operasi</td><td>Mengontrol dan mengoordinasi penggunaan hardware oleh berbagai program</td><td>Windows, Linux, macOS</td></tr>
+<tr><td>Program aplikasi</td><td>Menentukan cara sumber daya dipakai untuk menyelesaikan masalah user</td><td>Word processor, browser, compiler</td></tr>
+<tr><td>User</td><td>Orang, mesin, atau komputer lain yang memakai sistem</td><td>Kamu, server lain</td></tr>
+</table></div>
+
+<h4>Kernel, system program, dan application program</h4>
+<ul>
+  <li><b>Kernel</b>: inti OS yang <b>selalu berjalan</b> dari booting sampai shutdown.</li>
+  <li><b>System program</b>: ikut OS, tapi bukan kernel. Contoh: <code>ls</code>, <code>top</code>, <code>dir</code>.</li>
+  <li><b>Application program</b>: semua program di luar OS. Contoh: browser, game.</li>
+</ul>
+
+<h4>Interrupt, trap, dan exception</h4>
+<ul>
+  <li><b>Interrupt</b>: sinyal dari <i>hardware</i> (misalnya device selesai bekerja) yang membuat CPU menghentikan sementara pekerjaannya dan langsung menuju <b>ISR (Interrupt Service Routine)</b>.</li>
+  <li><b>Interrupt vector</b>: tabel berisi alamat semua ISR.</li>
+  <li><b>Trap / exception</b>: interrupt dari <i>software</i>, akibat error (misalnya pembagian dengan nol) atau permintaan user (system call).</li>
+  <li>Sebelum menangani interrupt, OS <b>menyimpan state CPU</b> (register dan program counter) agar bisa dilanjutkan nanti.</li>
+</ul>
+<div class="box"><b class="lbl">Ingat:</b> OS bersifat <i>interrupt driven</i>, artinya OS bekerja berdasarkan sinyal interrupt dari hardware maupun software.</div>
+
+<h4>Dual mode: user mode dan kernel mode</h4>
+<p>Hardware menyediakan <b>mode bit</b> untuk melindungi OS. Dalam materi ini: <b>1 = user mode</b>, <b>0 = kernel mode</b>.</p>
+<ul>
+  <li>Program user berjalan di <b>user mode</b>. Instruksi <i>privileged</i> (berbahaya) tidak boleh dijalankan di sini.</li>
+  <li>Kode OS berjalan di <b>kernel mode</b> dan boleh menjalankan instruksi privileged.</li>
+  <li>Saat <b>system call</b> dipanggil, mode berpindah ke kernel. Saat system call selesai, mode kembali ke user.</li>
+</ul>
+
+<h4>Timer</h4>
+<p>Timer mencegah program user terjebak <i>infinite loop</i> atau menguasai CPU terlalu lama. OS mengatur counter timer (instruksi privileged); counter ini berkurang setiap detak clock, dan saat mencapai nol timer memicu interrupt sehingga OS mendapatkan kembali kendali CPU.</p>
+
+<h4>Hierarki penyimpanan &amp; caching</h4>
+<p>Penyimpanan diurutkan dari <b>cepat, mahal, dan kecil</b> ke <b>lambat, murah, dan besar</b>:</p>
+<div class="formula">Register &rarr; Cache &rarr; Main memory (RAM, volatile) &rarr; Secondary storage (SSD/HDD, non-volatile)</div>
+<p><b>Caching</b> berarti menyalin data yang sering dipakai ke penyimpanan yang lebih cepat. Cache selalu lebih kecil dari yang di-cache-nya, sehingga pengelolaan <i>ukuran</i> dan <i>kebijakan penggantian</i> (replacement policy) menjadi masalah desain utama.</p>
+<p class="small">Satuan: 1 byte = 8 bit. 1 KB = 1.024 byte (bukan 1.000).</p>
+
+<h4>Multiprogramming vs multitasking (time-sharing)</h4>
+<div class="tw"><table>
+<tr><th style="width:22%"></th><th>Multiprogramming (batch)</th><th>Multitasking (time-sharing)</th></tr>
+<tr><td><b>Tujuan</b></td><td>Agar CPU selalu punya pekerjaan</td><td>Agar user bisa berinteraksi dengan program yang sedang berjalan</td></tr>
+<tr><td><b>Cara</b></td><td>Ketika satu job menunggu I/O, CPU pindah ke job lain</td><td>CPU berpindah job sangat sering sehingga terasa paralel</td></tr>
+<tr><td><b>Target</b></td><td>Utilisasi CPU tinggi</td><td>Response time &lt; 1 detik</td></tr>
+</table></div>
+
+<h4>Pengelolaan I/O &amp; DMA</h4>
+<ul>
+  <li>OS menyembunyikan kerumitan hardware lewat <b>device driver</b> dan <b>I/O subsystem</b> (buffering, caching, spooling).</li>
+  <li><b>Spooling</b>: menumpuk antrean pekerjaan output, misalnya antrean printer.</li>
+  <li><b>DMA (Direct Memory Access)</b>: controller memindahkan <b>blok data</b> langsung ke memori tanpa CPU, sehingga hanya <b>satu interrupt per blok</b> (bukan per byte).</li>
+</ul>
+
+<h4>Booting (startup)</h4>
+<p>Urutan booting: <b>BIOS/UEFI</b> (firmware di ROM/EPROM, menjalankan POST) &rarr; <b>bootloader</b> (misal GRUB) memuat kernel ke RAM &rarr; <b>kernel</b> menginisialisasi hardware dan driver &rarr; <b>system init</b> (systemd/init, PID 1) menjalankan daemon.</p>
+
+<h4>Sistem terdistribusi, multiprosesor, dan cluster</h4>
+<ul>
+  <li><b>Distributed system</b>: kumpulan komputer terhubung jaringan (LAN, MAN, WAN, PAN) yang tampak seperti satu sistem.</li>
+  <li><b>Multiprosesor (SMP)</b> mengikuti dua model. <i>Asymmetric</i>: tiap CPU punya tugas khusus. <i>Symmetric</i>: tiap CPU mengerjakan semua jenis tugas. Keuntungan: throughput lebih tinggi, hemat biaya, lebih andal (<i>graceful degradation</i>).</li>
+  <li><b>Clustered system</b>: beberapa komputer bekerja bersama, biasanya memakai storage bersama (SAN), untuk ketersediaan tinggi (<i>high availability</i>).</li>
+</ul>
+
+<h4>Virtualisasi &amp; cloud</h4>
+<ul>
+  <li><b>Virtualisasi</b>: menjalankan OS lain (guest) di atas OS utama (host) lewat <b>VMM (Virtual Machine Manager)</b>.</li>
+  <li><b>Cloud</b>: layanan komputasi lewat internet. Jenisnya: <b>SaaS</b> (aplikasi siap pakai), <b>PaaS</b> (platform untuk developer), <b>IaaS</b> (server/storage). Modelnya: public, private, hybrid.</li>
+  <li><b>Real-time OS</b>: punya batas waktu tetap. Hasil dianggap benar hanya jika batas waktu terpenuhi.</li>
+</ul>
+
+<h4>Open source vs free software</h4>
+<p>Keduanya berbeda. <b>Free software</b> dipelopori FSF dengan lisensi <i>copyleft</i> GPL. <b>Open source</b> menekankan akses kode sumber. Contoh: GNU/Linux, BSD UNIX.</p>
+
+<h3 id="b-2-layanan-system-call-dan-struktur-os-">B.2 Layanan, System Call, dan Struktur OS (Bab 2)</h3>
+
+<h4>Layanan OS</h4>
+<div class="tw"><table>
+<tr><th style="width:30%">Untuk user</th><th>Untuk efisiensi sistem</th></tr>
+<tr><td>
+<ul>
+<li>Eksekusi program (memuat, menjalankan, mengakhiri)</li>
+<li>Operasi I/O</li>
+<li>Manajemen file</li>
+<li>Komunikasi antar-proses (shared memory / message passing)</li>
+<li>Deteksi error</li>
+</ul></td>
+<td>
+<ul>
+<li><b>Resource allocation</b>: membagi CPU, memori, storage antar user/job</li>
+<li><b>Accounting</b>: mencatat pemakaian resource</li>
+<li><b>Protection</b>: mengontrol akses ke resource</li>
+<li><b>Security</b>: autentikasi, enkripsi, integritas data</li>
+</ul></td></tr>
+</table></div>
+<p><b>Antarmuka user</b>: <b>CLI</b> (perintah teks, bisa di-scripting) dan <b>GUI</b> (window, icon, menu, pointer, touchscreen).</p>
+
+<h4>System call</h4>
+<p>System call adalah <b>cara program user meminta layanan kernel</b>. Biasanya dipanggil lewat <b>API</b> (Win32 API, POSIX API, Java API) agar kode lebih portabel.</p>
+<div class="formula">User mode (1) &rarr; system call &rarr; Kernel mode (0): jalankan layanan &rarr; kembali ke User mode (1)</div>
+<div class="tw"><table>
+<tr><th style="width:22%">Kategori</th><th>Fungsi</th><th style="width:30%">Contoh (POSIX / Windows)</th></tr>
+<tr><td>Process control</td><td>Membuat, menghentikan, mengatur proses</td><td><code>fork()</code>, <code>exit()</code> / <code>CreateProcess()</code></td></tr>
+<tr><td>File management</td><td>Membuka, membaca, menulis, menutup file</td><td><code>open()</code>, <code>read()</code> / <code>CreateFile()</code></td></tr>
+<tr><td>Device management</td><td>Meminta, membaca, menulis ke perangkat</td><td><code>ioctl()</code>, <code>read()</code> / <code>SetConsoleMode()</code></td></tr>
+<tr><td>Information</td><td>Mengambil/mengatur waktu, tanggal, data sistem</td><td><code>getpid()</code>, <code>time()</code> / <code>GetSystemTime()</code></td></tr>
+<tr><td>Communications</td><td>Membuat koneksi dan mengirim pesan</td><td><code>pipe()</code>, <code>socket()</code> / <code>CreatePipe()</code></td></tr>
+</table></div>
+
+<h4>Struktur kernel (perbandingan)</h4>
+<div class="tw"><table>
+<tr><th style="width:14%">Arsitektur</th><th style="width:26%">Keunggulan</th><th style="width:26%">Kelemahan</th><th>Contoh</th></tr>
+<tr><td><b>Monolitik</b></td><td>Sangat cepat (tanpa overhead pergantian mode antar-layanan)</td><td>Satu bug (misal di driver) bisa membuat seluruh sistem crash</td><td>MS-DOS, UNIX awal</td></tr>
+<tr><td><b>Layered</b></td><td>Modul terisolasi, mudah di-debug</td><td>Penentuan urutan lapisan sulit; banyak overhead antar-lapisan</td><td>THE OS, OS/2 awal</td></tr>
+<tr><td><b>Microkernel</b></td><td>Kernel minimal (memori dasar, proses minimal, IPC) &rarr; aman dan mudah diperluas</td><td>Overhead komunikasi IPC tinggi</td><td>Mach, QNX, L4</td></tr>
+<tr><td><b>Modular (LKM)</b></td><td>Kernel inti + modul yang dimuat saat dibutuhkan; fleksibel</td><td>Pengelolaan dependensi antar-modul rumit</td><td>Linux, Solaris</td></tr>
+<tr><td><b>Hybrid</b></td><td>Menggabungkan performa dan fleksibilitas</td><td>Struktur internal kompleks</td><td>macOS, iOS, Windows 11</td></tr>
+</table></div>
+<div class="box"><b class="lbl">Cara mengingat:</b> <i>Monolitik = semua dalam satu wadah. Layered = bertingkat. Microkernel = kernel dikecilkan, sisanya di user space. LKM = inti kecil + modul yang bisa dimasukkan saat jalan. Hybrid = campuran.</i></div>
+
+<!-- ---------- PROSES ---------- -->
+<h3 id="b-3-konsep-proses">B.3 Konsep Proses</h3>
+
+<h4>Program vs proses</h4>
+<div class="tw"><table>
+<tr><th style="width:50%">Program (entitas <b>pasif</b>)</th><th>Proses (entitas <b>aktif</b>)</th></tr>
+<tr><td>Kumpulan instruksi yang tersimpan di disk (file executable)</td><td>Program yang <b>sedang dieksekusi</b></td></tr>
+<tr><td>Belum memakai CPU atau RAM</td><td>Memiliki memori aktif, register CPU, dan status eksekusi</td></tr>
+</table></div>
+<div class="analogi box"><b class="lbl">Analogi:</b> Program = <i>resep masakan</i> yang tertulis di buku. Proses = <i>kegiatan memasak</i> dengan resep itu, lengkap dengan kompor, panci, dan bahan yang sedang dipakai.</div>
+
+<h4>Struktur memori proses</h4>
+<div class="tw"><table>
+<tr><th style="width:16%">Bagian</th><th>Isi</th></tr>
+<tr><td>Text</td><td>Kode instruksi program (umumnya read-only)</td></tr>
+<tr><td>Data</td><td>Variabel global dan statis</td></tr>
+<tr><td>Heap</td><td>Memori yang dialokasikan saat run-time (<code>malloc()</code>, <code>new</code>)</td></tr>
+<tr><td>Stack</td><td>Parameter fungsi, return address, variabel lokal</td></tr>
+</table></div>
+
+<h4>Status proses (5 status)</h4>
+<div class="tw"><table>
+<tr><th style="width:18%">Status</th><th>Arti</th></tr>
+<tr><td>New</td><td>Proses sedang dibuat oleh OS</td></tr>
+<tr><td>Ready</td><td>Siap dan menunggu CPU</td></tr>
+<tr><td>Running</td><td>Instruksinya sedang dieksekusi CPU</td></tr>
+<tr><td>Waiting</td><td>Menunggu suatu kejadian, misalnya selesainya I/O</td></tr>
+<tr><td>Terminated</td><td>Eksekusi selesai</td></tr>
+</table></div>
+<p><b>Alur perpindahan status:</b></p>
+<ul>
+  <li>New &rarr; Ready: proses diterima (<i>admitted</i>).</li>
+  <li>Ready &rarr; Running: dipilih penjadwal (<i>dispatch</i>).</li>
+  <li>Running &rarr; Ready: waktu habis (interrupt timer) atau di-<i>preempt</i>.</li>
+  <li>Running &rarr; Waiting: meminta I/O atau menunggu event.</li>
+  <li>Waiting &rarr; Ready: I/O sudah selesai.</li>
+  <li>Running &rarr; Terminated: proses selesai (<code>exit()</code>).</li>
+</ul>
+
+<h4>Process Control Block (PCB)</h4>
+<p>PCB adalah "kartu identitas" setiap proses yang disimpan OS. Isinya:</p>
+<ul>
+  <li><b>Identitas &amp; eksekusi</b>: process state, PID, program counter, CPU registers</li>
+  <li><b>Penjadwalan</b>: prioritas dan pointer ke antrean</li>
+  <li><b>Memori</b>: base/limit register atau page table</li>
+  <li><b>Accounting</b>: waktu CPU yang dipakai, batas waktu</li>
+  <li><b>I/O</b>: daftar perangkat I/O dan file yang terbuka</li>
+</ul>
+
+<h4>Antrean &amp; penjadwal (scheduler)</h4>
+<div class="tw"><table>
+<tr><th style="width:20%">Antrean</th><th>Isi</th></tr>
+<tr><td>Job queue</td><td>Semua proses baru yang ada di storage sekunder</td></tr>
+<tr><td>Ready queue</td><td>Proses di memori utama yang siap dan menunggu CPU</td></tr>
+<tr><td>Device queue</td><td>Proses yang menunggu perangkat I/O tertentu</td></tr>
+</table></div>
+<div class="tw"><table>
+<tr><th style="width:24%">Scheduler</th><th style="width:20%">Frekuensi</th><th>Fungsi</th></tr>
+<tr><td>Short-term (CPU scheduler)</td><td>Milidetik</td><td>Memilih proses dari ready queue untuk diberi CPU. Harus sangat cepat.</td></tr>
+<tr><td>Long-term (job scheduler)</td><td>Detik/menit</td><td>Memilih job dari disk ke memori. Mengatur <b>derajat multiprogramming</b>.</td></tr>
+<tr><td>Medium-term</td><td>Kondisional</td><td>Swapping: memindahkan proses dari RAM ke disk sementara untuk menghemat memori.</td></tr>
+</table></div>
+
+<h4>Context switch</h4>
+<p>Saat CPU berpindah dari proses A ke proses B, OS <b>menyimpan state A ke PCB-nya</b>, lalu <b>memuat state B dari PCB-nya</b>. Waktu ini adalah <b>overhead murni</b>, karena CPU tidak mengerjakan hal yang berguna.</p>
+
+<h4>Pembuatan &amp; penghentian proses (Unix/Linux)</h4>
+<ul>
+  <li>Proses membentuk pohon <b>parent-child</b>. Setiap proses punya <b>PID</b> unik.</li>
+  <li><code>fork()</code>: menduplikasi proses induk menjadi proses anak.</li>
+  <li><code>exec()</code>: mengganti isi memori proses dengan program baru (biasanya dipanggil setelah <code>fork()</code>).</li>
+  <li><code>exit()</code>: menghentikan proses dan mengembalikan status ke parent lewat <code>wait()</code>.</li>
+  <li><code>abort()</code>: parent menghentikan child, misalnya karena tugasnya tidak lagi diperlukan atau melewati kuota.</li>
+  <li><b>Zombie process</b>: child sudah selesai, tapi parent belum memanggil <code>wait()</code>.</li>
+  <li><b>Orphan process</b>: parent sudah mati lebih dulu, sehingga child kehilangan induknya.</li>
+</ul>
+
+<!-- ---------- IPC ---------- -->
+<h3 id="b-4-komunikasi-antar-proses-ipc-amp-clie">B.4 Komunikasi Antar-Proses (IPC) &amp; Client-Server</h3>
+
+<h4>Mengapa perlu IPC?</h4>
+<p>Proses <b>independent</b> tidak memengaruhi dan tidak dipengaruhi proses lain. Proses <b>cooperating</b> bekerja sama, dengan alasan: <b>berbagi informasi</b>, <b>mempercepat komputasi</b>, <b>modularitas</b>, dan <b>kenyamanan</b>.</p>
+
+<h4>Shared memory vs message passing</h4>
+<div class="tw"><table>
+<tr><th style="width:22%">Aspek</th><th>Shared memory</th><th>Message passing</th></tr>
+<tr><td>Mekanisme</td><td>Area memori bersama diakses banyak proses</td><td>Pesan dikirim lewat kernel OS</td></tr>
+<tr><td>Kecepatan</td><td>Sangat cepat (tanpa kernel)</td><td>Lebih lambat (butuh system call)</td></tr>
+<tr><td>Sinkronisasi</td><td>Diatur programmer (rawan konflik)</td><td>Diatur otomatis oleh OS</td></tr>
+<tr><td>Cocok untuk</td><td>Komputasi lokal, data besar</td><td>Sistem terdistribusi, data kecil</td></tr>
+</table></div>
+
+<h4>Producer-consumer</h4>
+<p>Producer membuat data, consumer memakainya. Lewat <b>bounded buffer</b> (buffer berukuran terbatas), producer menunggu jika buffer penuh dan consumer menunggu jika buffer kosong. Lewat <b>unbounded buffer</b>, ukurannya tak terbatas sehingga producer tidak pernah menunggu. Masalah utamanya: dua proses tidak boleh menulis ke lokasi yang sama secara bersamaan.</p>
+
+<h4>Message passing: detail</h4>
+<ul>
+  <li><b>Direct</b>: pengirim dan penerima menyebut nama langsung, misalnya <code>send(P, message)</code> dan <code>receive(Q, message)</code>.</li>
+  <li><b>Indirect</b>: pesan lewat <b>mailbox/port</b>, misalnya <code>send(A, message)</code>.</li>
+  <li><b>Blocking</b>: pengirim/penerima menunggu sampai pesan selesai. <b>Non-blocking</b>: proses langsung lanjut.</li>
+  <li><b>Kapasitas buffer</b>: <i>zero capacity</i> (pengirim menunggu penerima siap, disebut <i>rendezvous</i>), <i>bounded</i> (pengirim menunggu jika antrean penuh), <i>unbounded</i> (pengirim tidak pernah diblokir).</li>
+</ul>
+
+<h4>Komunikasi client-server</h4>
+<ul>
+  <li><b>Socket</b>: endpoint jaringan, gabungan <b>IP address + port</b>. Port di bawah 1024 untuk layanan standar (80 = HTTP, 22 = SSH).
+    <ul><li><b>TCP</b>: connection-oriented, andal.</li><li><b>UDP</b>: connectionless, cepat, cocok untuk data real-time.</li></ul></li>
+  <li><b>RPC (Remote Procedure Call)</b>: memanggil fungsi di komputer lain seolah-olah fungsi lokal. Parameter dibungkus (<i>marshalling</i>) oleh <b>stub</b> sebelum dikirim.</li>
+  <li><b>Pipe</b>: saluran yang menghubungkan dua proses.
+    <ul><li><b>Ordinary pipe</b>: satu arah, harus ada hubungan parent-child.</li><li><b>Named pipe (FIFO)</b>: dua arah, tanpa hubungan parent-child.</li></ul></li>
+</ul>
+
+<!-- ---------- THREAD ---------- -->
+<h3 id="b-5-thread-amp-multithreading-bab-4">B.5 Thread &amp; Multithreading (Bab 4)</h3>
+
+<h4>Apa itu thread?</h4>
+<p>Thread adalah <b>unit dasar pemakaian CPU</b>. Setiap thread punya <b>Thread ID, program counter, register set, dan stack</b> sendiri. Thread dalam satu proses <b>berbagi code, data, dan resource</b> (misalnya file yang terbuka).</p>
+<div class="analogi box"><b class="lbl">Analogi:</b> Satu proses = satu <i>dapur</i>. Thread = <i>koki</i> di dapur itu. Tiap koki punya pisau dan catatan resepnya sendiri (stack dan PC), tapi mereka memakai kulkas dan bumbu yang sama (code, data, file).</div>
+
+<h4>Single-threaded vs multithreaded</h4>
+<div class="tw"><table>
+<tr><th style="width:50%">Single-threaded</th><th>Multithreaded</th></tr>
+<tr><td>Hanya punya satu alur eksekusi. Jika ada blocking system call, seluruh proses ikut berhenti.</td><td>Punya beberapa alur eksekusi dalam satu address space. Bisa mengerjakan beberapa tugas sekaligus (misalnya UI update sambil mengunduh data).</td></tr>
+<tr><td>Satu PC, satu set register, satu stack</td><td>Tiap thread punya PC dan stack sendiri, tapi berbagi code, data, dan file</td></tr>
+</table></div>
+
+<h4>Empat keuntungan multithreading</h4>
+<ol>
+  <li><b>Responsiveness</b>: aplikasi tetap interaktif walau sebagian thread sedang menunggu.</li>
+  <li><b>Resource sharing</b>: thread berbagi memori tanpa butuh IPC.</li>
+  <li><b>Economy</b>: membuat thread jauh lebih murah dan cepat daripada membuat proses.</li>
+  <li><b>Scalability</b>: thread bisa berjalan paralel di banyak core.</li>
+</ol>
+
+<h4>Concurrency vs parallelism</h4>
+<div class="tw"><table>
+<tr><th style="width:50%">Concurrency</th><th>Parallelism</th></tr>
+<tr><td>Beberapa tugas <b>sama-sama maju</b> dengan cara bergantian (interleaving). Bisa terjadi di satu core.</td><td>Beberapa tugas <b>benar-benar berjalan bersamaan</b> di core berbeda. Butuh hardware multicore.</td></tr>
+</table></div>
+<div class="box"><b class="lbl">Ingat:</b> Setiap parallelism adalah concurrency, tetapi tidak sebaliknya. Concurrency adalah soal <i>struktur</i> (banyak tugas yang maju), parallelism adalah soal <i>eksekusi simultan</i>.</div>
+
+<h4>Data parallelism vs task parallelism</h4>
+<ul>
+  <li><b>Data parallelism</b>: data dibagi, lalu tiap core menjalankan <b>operasi yang sama</b> pada bagian data yang berbeda. Contoh: mengalikan elemen matriks besar secara simultan.</li>
+  <li><b>Task parallelism</b>: tugas dibagi, lalu tiap thread menjalankan <b>operasi yang berbeda</b>. Contoh: thread 1 mengedit UI, thread 2 mengunduh file, thread 3 memeriksa ejaan.</li>
+</ul>
+
+<h4>Hukum Amdahl</h4>
+<p>Hukum ini menghitung speedup yang bisa didapat dengan menambah core, jika program punya bagian serial dan bagian paralel.</p>
+<div class="formula">Speedup = 1 / ( S + (1 &minus; S) / N )<br>S = porsi serial, N = jumlah core. Jika N &rarr; &infin;, speedup &rarr; 1 / S</div>
+<p>Contoh: program 75% paralel (S = 0,25). Dari 1 ke 2 core: 1 / (0,25 + 0,75/2) = <b>1,6 kali</b>. Walaupun core ditambah terus, speedup maksimum hanya 1/0,25 = <b>4 kali</b>. Jadi bagian serial sangat memengaruhi hasil.</p>
+
+<h4>User thread vs kernel thread</h4>
+<div class="tw"><table>
+<tr><th style="width:50%">User thread</th><th>Kernel thread</th></tr>
+<tr><td>Dikelola thread library di user level, tanpa dukungan kernel. Pembuatan dan pengelolaannya sangat cepat.</td><td>Dikelola dan didukung langsung oleh OS. Jika satu thread terblokir, kernel bisa menjadwalkan thread lain dari proses yang sama.</td></tr>
+<tr><td>Jika satu user thread terblokir, <b>seluruh proses ikut terblokir</b></td><td>Lebih lambat dibuat dan dikelola (butuh system call)</td></tr>
+</table></div>
+
+<h4>Model pemetaan multithreading</h4>
+<div class="tw"><table>
+<tr><th style="width:20%">Model</th><th>Penjelasan</th><th style="width:30%">Kelebihan / kekurangan</th></tr>
+<tr><td><b>Many-to-one</b></td><td>Banyak user thread &rarr; 1 kernel thread</td><td>Efisien, tapi satu thread terblokir membuat semua ikut terblokir; tidak bisa memakai multicore</td></tr>
+<tr><td><b>One-to-one</b></td><td>1 user thread &rarr; 1 kernel thread</td><td>Lebih konkuren dan mendukung multicore; dipakai Windows dan Linux</td></tr>
+<tr><td><b>Many-to-many</b></td><td>M user thread &rarr; N kernel thread (M &ge; N)</td><td>Paling fleksibel, tetapi implementasinya paling rumit</td></tr>
+</table></div>
+
+<h4>Thread library</h4>
+<ul>
+  <li><b>POSIX Pthreads</b>: standar IEEE (POSIX.1c). <code>pthread_create()</code> membuat thread, <code>pthread_join()</code> menunggu thread anak selesai. Data yang dipakai bersama biasanya berupa variabel global.</li>
+  <li><b>Windows threads</b>: library kernel-level pada Windows, memakai Win32/Win64 API (<code>CreateThread()</code>).</li>
+  <li><b>Java threads</b>: dibuat dengan <i>extend</i> kelas <code>Thread</code> atau <i>implement</i> interface <code>Runnable</code>. Kode tugas ada di <code>run()</code>, eksekusi dimulai dengan <code>start()</code>, dan koordinasi lewat <code>join()</code>. Versi modern memakai <code>ExecutorService</code>.</li>
+</ul>
+
+<h4>Implicit threading</h4>
+<p>Pembuatan dan pengelolaan thread diserahkan ke compiler atau run-time library.</p>
+<ul>
+  <li><b>Thread pool</b>: sejumlah thread dibuat di awal dan menunggu tugas. Tugas dimasukkan ke antrean, lalu thread yang bebas mengambilnya dan kembali ke pool setelah selesai. <i>Manfaat</i>: lebih cepat (thread dipakai ulang), jumlah thread terbatas, dan pembuatan tugas terpisah dari eksekusinya.</li>
+  <li><b>OpenMP</b>: kumpulan compiler directive dan API untuk C/C++ yang otomatis memparalelkan blok kode.</li>
+  <li><b>Grand Central Dispatch (GCD)</b>: teknologi Apple (macOS/iOS) yang mengelola <i>dispatch queue</i> tugas di level sistem.</li>
+</ul>
+
+<h4>Isu-isu multithreading</h4>
+<ul>
+  <li><b>fork() dan exec()</b>: <code>fork()</code> punya dua versi, yaitu menduplikasi <i>semua</i> thread atau hanya <i>thread pemanggil</i>. Jika <code>exec()</code> langsung dipanggil setelah <code>fork()</code>, cukup duplikasi thread pemanggil saja, karena <code>exec()</code> akan mengganti seluruh proses.</li>
+  <li><b>Thread cancellation</b>:
+    <ul>
+      <li><i>Asynchronous</i>: thread target langsung dihentikan. Risiko: data bersama bisa rusak jika thread sedang menulis atau memegang lock.</li>
+      <li><i>Deferred</i>: thread target memeriksa sendiri di <i>cancellation point</i> apakah harus berhenti, sehingga bisa membersihkan resource dengan aman.</li>
+    </ul></li>
+  <li><b>Signal handling</b>: sinyal UNIX memberi tahu proses bahwa suatu peristiwa terjadi (bisa <i>synchronous</i> atau <i>asynchronous</i>). Sinyal multithread dapat dikirim ke: thread asal sinyal, semua thread, thread tertentu, atau thread khusus penangan sinyal.</li>
+  <li><b>Thread-local storage (TLS)</b>: setiap thread punya salinan data pribadinya. Bedanya dengan variabel lokal: variabel lokal hanya hidup selama fungsi dipanggil, TLS hidup selama thread berjalan.</li>
+</ul>
+
+<h4>Implementasi di OS nyata</h4>
+<div class="tw"><table>
+<tr><th style="width:20%">Fitur</th><th>Windows</th><th>Linux (NPTL)</th></tr>
+<tr><td>Model</td><td>One-to-one</td><td>One-to-one</td></tr>
+<tr><td>Struktur data</td><td>ETHREAD (executive) &amp; KTHREAD (kernel)</td><td><code>struct task_struct</code></td></tr>
+<tr><td>Pembuatan</td><td><code>CreateThread()</code></td><td>System call <code>clone()</code></td></tr>
+<tr><td>Istilah</td><td>Process dan thread dibedakan jelas</td><td>Thread disebut <i>task</i> atau <i>light weight process</i></td></tr>
+</table></div>
+
+<!-- ---------- CPU SCHEDULING ---------- -->
+<h3 id="b-6-cpu-scheduling-bab-5">B.6 CPU Scheduling (Bab 5)</h3>
+
+<h4>Kapan penjadwal memilih proses?</h4>
+<ol>
+  <li>Running &rarr; Waiting (<b>tidak ada pilihan</b>, harus pilih proses baru)</li>
+  <li>Running &rarr; Ready (<b>ada pilihan</b>)</li>
+  <li>Waiting &rarr; Ready (<b>ada pilihan</b>)</li>
+  <li>Terminate (<b>tidak ada pilihan</b>)</li>
+</ol>
+<ul>
+  <li><b>Nonpreemptive</b>: penjadwalan hanya terjadi di situasi 1 dan 4. Proses menguasai CPU sampai ia melepasnya sendiri.</li>
+  <li><b>Preemptive</b>: penjadwalan juga terjadi di situasi 2 dan 3. CPU bisa diambil dari proses yang sedang berjalan. Hampir semua OS modern (Windows, macOS, Linux, UNIX) memakai preemptive.</li>
+</ul>
+
+<h4>Lima kriteria penjadwalan</h4>
+<div class="tw"><table>
+<tr><th style="width:24%">Kriteria</th><th style="width:14%">Tujuan</th><th>Arti</th></tr>
+<tr><td>CPU utilization</td><td>Maksimum</td><td>Seberapa sibuk CPU</td></tr>
+<tr><td>Throughput</td><td>Maksimum</td><td>Jumlah proses yang selesai per satuan waktu</td></tr>
+<tr><td>Turnaround time</td><td>Minimum</td><td>Waktu dari proses masuk sampai selesai (Finish &minus; Arrival)</td></tr>
+<tr><td>Waiting time</td><td>Minimum</td><td>Total waktu proses menunggu di ready queue (Turnaround &minus; Burst)</td></tr>
+<tr><td>Response time</td><td>Minimum</td><td>Waktu dari request dikirim sampai respons <b>pertama</b> muncul</td></tr>
+</table></div>
+
+<h4>Istilah wajib: arrival time, burst time</h4>
+<p><b>Burst time</b> adalah lama proses memakai CPU. <b>Arrival time</b> adalah saat proses masuk ready queue. Jika soal tidak menyebut arrival time, anggap semua proses datang pada <b>t = 0</b>.</p>
+
+<h4>Algoritma penjadwalan</h4>
+<div class="tw"><table>
+<tr><th style="width:17%">Algoritma</th><th>Cara kerja</th><th style="width:30%">Kelebihan / kekurangan</th></tr>
+<tr><td><b>FCFS</b><br><span class="small">First-Come, First-Served</span></td><td>Proses yang datang duluan dilayani duluan. Nonpreemptive.</td><td>Sederhana. Kekurangan: <i>convoy effect</i>, yaitu proses pendek ikut menunggu di belakang proses panjang.</td></tr>
+<tr><td><b>SJF</b><br><span class="small">Shortest Job First</span></td><td>Dipilih proses dengan <i>burst berikutnya</i> terpendek.</td><td><b>Optimal</b>: menghasilkan rata-rata waiting time terkecil. Kekurangan: panjang burst berikutnya harus <i>diperkirakan</i>. Versi preemptive disebut <b>SRTF</b>.</td></tr>
+<tr><td><b>Round Robin (RR)</b></td><td>Tiap proses dapat jatah waktu kecil (<b>time quantum q</b>, biasanya 10&ndash;100 ms). Jika belum selesai, proses dipindah ke akhir antrean. Preemptive.</td><td>Respons lebih baik. Jika q besar &rarr; mirip FCFS. Jika q kecil &rarr; banyak context switch. Maka q harus besar dibanding waktu context switch. Setiap proses tidak menunggu lebih dari (n&minus;1)q.</td></tr>
+<tr><td><b>Priority</b></td><td>Proses dengan <b>angka prioritas terkecil</b> dipilih lebih dulu. Bisa preemptive atau nonpreemptive.</td><td>Kekurangan: <i>starvation</i> (proses prioritas rendah tidak pernah dijalankan). Solusi: <b>aging</b>, yaitu prioritas naik seiring waktu tunggu.</td></tr>
+</table></div>
+<div class="box"><b class="lbl">Catatan penting:</b> SJF adalah kasus khusus priority scheduling, di mana prioritas = kebalikan dari burst berikutnya. Priority + RR: proses prioritas tertinggi jalan dulu; jika ada beberapa proses dengan prioritas sama, mereka bergantian dengan RR.</div>
+
+<!-- ============ BAGIAN C ============ -->
+<h2 id="c-latihan-soal-amp-pembahasan">C. Latihan Soal &amp; Pembahasan</h2>
+<p>Bagian ini berisi contoh soal dengan pembahasan langkah demi langkah. Kerjakan dulu sendiri, baru cocokkan dengan pembahasan.</p>
+
+<h3 id="c-1-soal-konseptual">C.1 Soal Konseptual</h3>
+
+<div class="qa">
+<div class="q">1. Sebutkan 3 tujuan sistem operasi dan jelaskan fungsi kernel.</div>
+<div class="a"><b>Jawab:</b> Tiga tujuan: (1) menjalankan program user dan memudahkan user menyelesaikan masalah, (2) membuat komputer nyaman dipakai, (3) memakai hardware secara efisien. Kernel adalah bagian inti OS yang selalu berjalan sejak booting sampai shutdown.</div>
+</div>
+
+<div class="qa">
+<div class="q">2. Apa perbedaan interrupt dan trap? Berikan contoh masing-masing.</div>
+<div class="a"><b>Jawab:</b> Interrupt berasal dari <i>hardware</i> (contoh: disk selesai membaca data). Trap berasal dari <i>software</i>, karena error (contoh: pembagian dengan nol) atau permintaan user (system call).</div>
+</div>
+
+<div class="qa">
+<div class="q">3. Jelaskan apa yang terjadi saat program user memanggil system call. Sebutkan mode bit sebelum dan sesudahnya.</div>
+<div class="a"><b>Jawab:</b> (1) Program berada di user mode (mode bit = 1). (2) Pemanggilan system call memindahkan eksekusi ke kernel mode (mode bit = 0). (3) Kernel menjalankan layanan yang diminta. (4) Setelah selesai, mode bit kembali ke 1 (user). Dengan cara ini, program user tidak bisa langsung menjalankan instruksi privileged.</div>
+</div>
+
+<div class="qa">
+<div class="q">4. Mengapa sistem memakai caching? Apa hubungannya dengan hierarki penyimpanan?</div>
+<div class="a"><b>Jawab:</b> Penyimpanan cepat itu kecil dan mahal, sedangkan penyimpanan besar itu lambat. Caching menyalin data yang sering dipakai ke penyimpanan yang lebih cepat, sehingga akses berikutnya lebih cepat. Cache adalah bagian dari hierarki: register &rarr; cache &rarr; RAM &rarr; disk.</div>
+</div>
+
+<div class="qa">
+<div class="q">5. Sebutkan 5 status proses dan gambarkan alur perpindahannya.</div>
+<div class="a"><b>Jawab:</b> New, Ready, Running, Waiting, Terminated. Alur umum: New &rarr; Ready &rarr; Running &rarr; (Waiting &rarr; Ready &rarr; Running)* &rarr; Terminated. Running kembali ke Ready jika waktu habis atau di-preempt.</div>
+</div>
+
+<div class="qa">
+<div class="q">6. Apa perbedaan zombie process dan orphan process?</div>
+<div class="a"><b>Jawab:</b> <b>Zombie</b>: child sudah selesai, tetapi parent belum memanggil <code>wait()</code> untuk mengambil status exit-nya. <b>Orphan</b>: parent mati lebih dulu, sehingga child kehilangan induknya.</div>
+</div>
+
+<div class="qa">
+<div class="q">7. Bandingkan shared memory dan message passing dalam 3 aspek.</div>
+<div class="a"><b>Jawab:</b> (1) <i>Kecepatan</i>: shared memory lebih cepat karena tanpa kernel, message passing lebih lambat karena lewat system call. (2) <i>Sinkronisasi</i>: shared memory diatur programmer, message passing diatur OS. (3) <i>Kecocokan</i>: shared memory cocok untuk komputasi lokal, message passing cocok untuk sistem terdistribusi.</div>
+</div>
+
+<div class="qa">
+<div class="q">8. Sebuah program 80% paralel dijalankan di 4 core. Hitung speedup-nya dan jelaskan batas maksimumnya.</div>
+<div class="a"><b>Jawab:</b> S = 0,2 dan N = 4.<br>
+Speedup = 1 / (0,2 + 0,8/4) = 1 / (0,2 + 0,2) = 1 / 0,4 = <b>2,5 kali</b>.<br>
+Batas maksimum (N &rarr; &infin;) = 1 / S = 1 / 0,2 = <b>5 kali</b>, walaupun core ditambah tak terbatas.</div>
+</div>
+
+<div class="qa">
+<div class="q">9. Mengapa many-to-one model tidak bisa memanfaatkan multicore? Dan apa kelemahan utamanya?</div>
+<div class="a"><b>Jawab:</b> Pada many-to-one, banyak user thread dipetakan ke <b>satu</b> kernel thread. Hanya satu thread yang bisa berjalan di kernel pada satu waktu, sehingga tidak ada paralelisme di multicore. Kelemahan utamanya: jika satu thread terblokir (misalnya menunggu I/O), seluruh proses ikut terblokir.</div>
+</div>
+
+<div class="qa">
+<div class="q">10. Mengapa asynchronous cancellation berisiko, dan bagaimana deferred cancellation mengatasinya?</div>
+<div class="a"><b>Jawab:</b> Asynchronous cancellation menghentikan thread seketika, sehingga bisa terjadi saat thread sedang mengubah data bersama atau memegang lock, yang membuat data tidak konsisten. Deferred cancellation membiarkan thread memeriksa sendiri di cancellation point, sehingga ia bisa membersihkan resource dan menyimpan data dengan aman sebelum berhenti.</div>
+</div>
+
+<h3 id="c-2-soal-hitungan-cpu-scheduling-contoh-">C.2 Soal Hitungan CPU Scheduling (Contoh dari Materi)</h3>
+<div class="warn"><b class="lbl">Asumsi:</b> semua proses tiba pada t = 0 dan tidak ada I/O. Rumus yang dipakai:<br>
+<b>Turnaround = Finish &minus; Arrival</b> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Waiting = Turnaround &minus; Burst</b> &nbsp;&nbsp;|&nbsp;&nbsp; <b>Average = jumlah waiting &divide; jumlah proses</b></div>
+
+<h4>Contoh 1 &ndash; FCFS</h4>
+<p>Proses: P1 (burst 24), P2 (burst 3), P3 (burst 3). Urutan kedatangan: P1, P2, P3.</p>
+<div class="tw"><table class="gantt"><tr><td style="width:80%">P1 (0&ndash;24)</td><td>P2 (24&ndash;27)</td><td>P3 (27&ndash;30)</td></tr></table></div>
+<p>Waiting: P1 = 0, P2 = 24, P3 = 27. Rata-rata = (0 + 24 + 27) / 3 = <b>17</b>.</p>
+<p>Jika urutannya diganti menjadi P2, P3, P1, Gantt-nya: P2 (0&ndash;3), P3 (3&ndash;6), P1 (6&ndash;30). Waiting: P2 = 0, P3 = 3, P1 = 6. Rata-rata = <b>3</b>. Perbedaan besar ini adalah <i>convoy effect</i>: proses pendek lebih baik didahulukan.</p>
+
+<h4>Contoh 2 &ndash; SJF (nonpreemptive)</h4>
+<p>Proses: P1 (6), P2 (8), P3 (7), P4 (3). Urutkan berdasarkan burst terkecil: P4 (3), P1 (6), P3 (7), P2 (8).</p>
+<div class="tw"><table class="gantt"><tr><td>P4 (0&ndash;3)</td><td>P1 (3&ndash;9)</td><td>P3 (9&ndash;16)</td><td>P2 (16&ndash;24)</td></tr></table></div>
+<p>Waiting: P4 = 0, P1 = 3, P3 = 9, P2 = 16. Total = 28. Rata-rata = 28 / 4 = <b>7</b>.</p>
+
+<h4>Contoh 3 &ndash; Round Robin (q = 4)</h4>
+<p>Proses: P1 (24), P2 (3), P3 (3). Urutan antrean: P1, P2, P3.</p>
+<div class="tw"><table class="gantt"><tr><td>P1<br>0&ndash;4</td><td>P2<br>4&ndash;7</td><td>P3<br>7&ndash;10</td><td>P1<br>10&ndash;14</td><td>P1<br>14&ndash;18</td><td>P1<br>18&ndash;22</td><td>P1<br>22&ndash;26</td><td>P1<br>26&ndash;30</td></tr></table></div>
+<p>Finish: P2 = 7, P3 = 10, P1 = 30. Waiting = Finish &minus; Burst: P1 = 30 &minus; 24 = 6, P2 = 7 &minus; 3 = 4, P3 = 10 &minus; 3 = 7.<br>
+Rata-rata waiting = (6 + 4 + 7) / 3 = <b>5,67</b>.</p>
+<div class="box"><b class="lbl">Perbandingan:</b> Dengan urutan yang sama, FCFS menghasilkan rata-rata 17, sedangkan RR menghasilkan 5,67. Selain itu, response time P2 dengan RR hanya 4, dibanding 24 dengan FCFS. Itulah keunggulan RR: respons lebih cepat.</div>
+
+<h4>Contoh 4 &ndash; Priority (nonpreemptive; angka kecil = prioritas tinggi)</h4>
+<div class="tw"><table>
+<tr><th>Proses</th><th>Burst</th><th>Prioritas</th></tr>
+<tr><td>P1</td><td>10</td><td>3</td></tr>
+<tr><td>P2</td><td>1</td><td>1</td></tr>
+<tr><td>P3</td><td>2</td><td>4</td></tr>
+<tr><td>P4</td><td>1</td><td>5</td></tr>
+<tr><td>P5</td><td>5</td><td>2</td></tr>
+</table></div>
+<p>Urutan prioritas: P2 (1), P5 (2), P1 (3), P3 (4), P4 (5).</p>
+<div class="tw"><table class="gantt"><tr><td>P2 (0&ndash;1)</td><td>P5 (1&ndash;6)</td><td>P1 (6&ndash;16)</td><td>P3 (16&ndash;18)</td><td>P4 (18&ndash;19)</td></tr></table></div>
+<p>Waiting: P2 = 0, P5 = 1, P1 = 6, P3 = 16, P4 = 18. Total = 41. Rata-rata = 41 / 5 = <b>8,2</b>.</p>
+
+<h3 id="c-3-soal-latihan-kerjakan-sendiri-lalu-c">C.3 Soal Latihan (kerjakan sendiri, lalu cek jawaban)</h3>
+<div class="qa">
+<div class="q">Soal A. Proses P1 (burst 8), P2 (burst 4), P3 (burst 9), P4 (burst 5). Semua tiba pada t = 0 dengan urutan P1, P2, P3, P4. Hitung rata-rata waiting time untuk FCFS, SJF, dan RR (q = 3).</div>
+<div class="a">
+<b>FCFS:</b> P1 (0&ndash;8), P2 (8&ndash;12), P3 (12&ndash;21), P4 (21&ndash;26). Waiting: 0, 8, 12, 21. Total = 41. Rata-rata = <b>10,25</b>.<br><br>
+<b>SJF:</b> urutan P2 (4), P4 (5), P1 (8), P3 (9). Gantt: P2 (0&ndash;4), P4 (4&ndash;9), P1 (9&ndash;17), P3 (17&ndash;26). Waiting: 0, 4, 9, 17. Total = 30. Rata-rata = <b>7,5</b>.<br><br>
+<b>RR (q = 3):</b> urutan kejadian: P1 (0&ndash;3), P2 (3&ndash;6), P3 (6&ndash;9), P4 (9&ndash;12), P1 (12&ndash;15), P2 (15&ndash;16, selesai), P3 (16&ndash;19), P4 (19&ndash;21, selesai), P1 (21&ndash;23, selesai), P3 (23&ndash;26, selesai).<br>
+Finish: P1 = 23, P2 = 16, P3 = 26, P4 = 21. Waiting: P1 = 15, P2 = 12, P3 = 17, P4 = 16. Total = 60. Rata-rata = <b>15</b>.<br><br>
+<span class="small">Catatan: SJF memberi waiting time terkecil (terbukti optimal). RR menghasilkan waiting time lebih besar, tetapi response time pertamanya lebih cepat.</span>
+</div>
+</div>
+
+<div class="qa">
+<div class="q">Soal B. Sebuah aplikasi 90% paralel dijalankan pada 8 core. Hitung speedup. Berapa batas maksimum speedup-nya?</div>
+<div class="a">S = 0,1 dan N = 8. Speedup = 1 / (0,1 + 0,9/8) = 1 / (0,1 + 0,1125) = 1 / 0,2125 &asymp; <b>4,7 kali</b>. Batas maksimum = 1 / 0,1 = <b>10 kali</b>.</div>
+</div>
+
+<div class="qa">
+<div class="q">Soal C. Jelaskan perbedaan user thread dan kernel thread, lalu sebutkan model pemetaan yang paling tepat untuk sistem multicore dan alasannya.</div>
+<div class="a">User thread dikelola library di user level (cepat, tapi satu thread terblokir memblokir seluruh proses). Kernel thread dikelola OS (lebih lambat, tapi thread lain tetap bisa jalan). Untuk multicore, model <b>one-to-one</b> (dipakai Windows dan Linux) atau <b>many-to-many</b> paling tepat, karena keduanya bisa memanfaatkan banyak core. Many-to-one tidak bisa.</div>
+</div>
+
+<!-- ============ BAGIAN D ============ -->
+<h2 id="d-glosarium-istilah-penting">D. Glosarium Istilah Penting</h2>
+<div class="tw"><table>
+<tr><th style="width:24%">Istilah</th><th style="width:20%">Bahasa Indonesia</th><th>Penjelasan singkat</th></tr>
+<tr><td>Operating system (OS)</td><td>Sistem operasi</td><td>Program perantara antara user dan hardware</td></tr>
+<tr><td>Kernel</td><td>Inti OS</td><td>Bagian OS yang selalu berjalan</td></tr>
+<tr><td>Interrupt</td><td>Interupsi</td><td>Sinyal dari hardware yang menghentikan sementara CPU</td></tr>
+<tr><td>Trap / exception</td><td>Jebakan / pengecualian</td><td>Interrupt dari software (error atau system call)</td></tr>
+<tr><td>Mode bit</td><td>Bit mode</td><td>Penanda user mode (1) atau kernel mode (0)</td></tr>
+<tr><td>System call</td><td>Panggilan sistem</td><td>Permintaan program user ke layanan kernel</td></tr>
+<tr><td>Caching</td><td>Caching</td><td>Menyalin data ke penyimpanan yang lebih cepat</td></tr>
+<tr><td>DMA</td><td>Akses memori langsung</td><td>Device memindahkan blok data ke RAM tanpa CPU</td></tr>
+<tr><td>Spooling</td><td>Spooling</td><td>Menumpuk antrean pekerjaan output (misal printer)</td></tr>
+<tr><td>Process (proses)</td><td>Proses</td><td>Program yang sedang dieksekusi (entitas aktif)</td></tr>
+<tr><td>PCB</td><td>Blok kontrol proses</td><td>Struktur data OS yang menyimpan informasi tiap proses</td></tr>
+<tr><td>Context switch</td><td>Pergantian konteks</td><td>Menyimpan state proses lama dan memuat state proses baru</td></tr>
+<tr><td>Zombie / orphan</td><td>Zombie / yatim</td><td>Child selesai tanpa diambil parent / child yang kehilangan parent</td></tr>
+<tr><td>IPC</td><td>Komunikasi antar-proses</td><td>Mekanisme pertukaran data antar proses</td></tr>
+<tr><td>Socket</td><td>Soket</td><td>Endpoint komunikasi jaringan (IP + port)</td></tr>
+<tr><td>RPC</td><td>Pemanggilan prosedur jarak jauh</td><td>Memanggil fungsi di komputer lain seolah lokal</td></tr>
+<tr><td>Thread</td><td>Utas</td><td>Unit dasar eksekusi CPU di dalam proses</td></tr>
+<tr><td>Concurrency</td><td>Konkurensi</td><td>Banyak tugas maju secara bergantian</td></tr>
+<tr><td>Parallelism</td><td>Paralelisme</td><td>Banyak tugas berjalan bersamaan di banyak core</td></tr>
+<tr><td>Amdahl's law</td><td>Hukum Amdahl</td><td>Rumus speedup berdasarkan porsi serial dan paralel</td></tr>
+<tr><td>Thread pool</td><td>Kumpulan thread</td><td>Thread yang dibuat di awal dan dipakai ulang</td></tr>
+<tr><td>TLS</td><td>Penyimpanan lokal thread</td><td>Data pribadi tiap thread yang hidup selama thread berjalan</td></tr>
+<tr><td>Scheduler</td><td>Penjadwal</td><td>Komponen OS yang memilih proses untuk CPU</td></tr>
+<tr><td>Preemptive</td><td>Dapat dipotong</td><td>CPU bisa diambil dari proses yang sedang berjalan</td></tr>
+<tr><td>Burst time</td><td>Waktu burst</td><td>Lama proses memakai CPU</td></tr>
+<tr><td>Arrival time</td><td>Waktu kedatangan</td><td>Saat proses masuk ready queue</td></tr>
+<tr><td>Turnaround time</td><td>Waktu penyelesaian</td><td>Finish &minus; Arrival</td></tr>
+<tr><td>Waiting time</td><td>Waktu tunggu</td><td>Waktu proses menunggu di ready queue</td></tr>
+<tr><td>Response time</td><td>Waktu respons</td><td>Waktu dari request sampai respons pertama</td></tr>
+<tr><td>Time quantum</td><td>Jatah waktu</td><td>Lama maksimum satu proses memakai CPU pada RR</td></tr>
+<tr><td>Starvation</td><td>Kelaparan</td><td>Proses tidak pernah mendapat CPU karena prioritasnya terus dikalahkan</td></tr>
+<tr><td>Aging</td><td>Penuaan prioritas</td><td>Prioritas proses naik seiring waktu tunggu, untuk mencegah starvation</td></tr>
+</table></div>
+
+<div class="box" style="margin-top:14px"><b class="lbl">Tips terakhir:</b> Hafalkan rumus Amdahl dan rumus waiting time, lalu latihan Gantt chart FCFS, SJF, RR, dan Priority sampai bisa mengerjakannya tanpa melihat contoh. Untuk soal essay, gunakan pola <i>apa &rarr; bagaimana cara kerjanya &rarr; kelebihan dan kekurangan &rarr; contoh</i>.</div>
+
+</main>
+
+<script>
+(function(){
+  var b=document.getElementById('theme'), root=document.documentElement, key='kisi-theme';
+  var cur=null; try{cur=localStorage.getItem(key);}catch(e){}
+  function apply(t){ if(t){root.setAttribute('data-theme',t);} else {root.removeAttribute('data-theme');} }
+  apply(cur);
+  b.addEventListener('click',function(){
+    var dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var now = root.getAttribute('data-theme') || (dark?'dark':'light');
+    var next = now==='dark'?'light':'dark';
+    apply(next); try{localStorage.setItem(key,next);}catch(e){}
+  });
+})();
+</script>
+</body>
+</html>
+
+</body></html>
